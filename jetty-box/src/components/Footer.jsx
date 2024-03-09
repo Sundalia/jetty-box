@@ -5,7 +5,7 @@ import youtube from "../assets/youtube-icon.svg";
 
 function Footer() {
   return (
-    <div className="mt-10 px-4 pb-[127px]">
+    <div className="mt-10 px-4 pb-[127px] bg-[#262525]">
       <div className="mt-3 h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
       <h3 className="mt-4 font-['Plateia'] text-left uppercase text-xl">
         Logo
