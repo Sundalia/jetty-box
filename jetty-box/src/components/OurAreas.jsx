@@ -1,8 +1,8 @@
 function HowWeWork() {
   return (
-    <div className="mt-10 px-4 pb-[56px]">
+    <div className="px-4 pb-[56px]">
       <div>
-        <h3 className="mt-4 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+        <h3 className="font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           Охватываем широкую нишивую область
         </h3>
         <div className="flex mt-8">

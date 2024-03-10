@@ -1,0 +1,111 @@
+.questions {
+  /* background: #ecf1f1; */
+  padding: 100px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.questionsContainer {
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.questionsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding-bottom: 20px; */
+  transition: all 0.5s ease;
+  gap: 0px;
+  background-color: #1e1e1e;
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 17px;
+  padding-right: 14px;
+  min-height: 70px;
+  justify-content: center;
+}
+
+.questionsItemActive {
+  transition: all 0.5s ease;
+  gap: 15px;
+}
+
+.questionsTitle {
+  font-family: Roboto;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: #132529;
+}
+
+.questionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  min-height: 70px;
+}
+
+/* .questionsHeader:hover .questionsQuestion {
+  color: #eba534;
+} */
+
+.questionsArrow {
+  width: 25px;
+  height: 25px;
+  background: url(../assets/dropdown-shevron.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+}
+
+.questionsArrowActive {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.questionsQuestion {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 124.69%;
+  text-align: left;
+}
+
+.questionsAnswerText {
+  margin: 0;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.questionsAnswer {
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.questionsAnswerActive {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+.questionsAnkor {
+  text-decoration: none;
+}

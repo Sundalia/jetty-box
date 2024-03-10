@@ -5,12 +5,14 @@ import Footer from "./components/Footer";
 import Application from "./components/Application";
 import HowWeWork from "./components/HowWeWork";
 import OurAreas from "./components/OurAreas";
+import DropdownList from "./components/DropdownList";
 
 export default function App() {
   return (
     <>
       <Header />
       <Hero />
+      <DropdownList />
       <OurAreas />
       <HowWeWork />
       <Application />
