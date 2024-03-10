@@ -15,8 +15,8 @@ export default function DropdownList() {
   };
 
   return (
-    <div className="mt-10 px-4 pb-[89px]">
-      <h3 className="mt-4 mb-3 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+    <div className="px-4 pb-[89px]">
+      <h3 className="mb-3 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
         Мы с этим поможем
       </h3>{" "}
       <ul className={styles.questionsContainer}>

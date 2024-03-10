@@ -68,7 +68,30 @@ button:hover {
   pointer-events: none; /* чтобы не мешать кликам */
   z-index: -1; /* чтобы разместиться под текстом кнопки */
   border: 2px solid transparent;
-  background: linear-gradient(to top right, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 50%);
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container div {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #3a3938 0%, #202020 100%);
 }
 
 @media (prefers-color-scheme: light) {

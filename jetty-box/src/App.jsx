@@ -6,12 +6,14 @@ import Application from "./components/Application";
 import HowWeWork from "./components/HowWeWork";
 import OurAreas from "./components/OurAreas";
 import DropdownList from "./components/DropdownList";
+import Slider from "./components/Slider";
 
 export default function App() {
   return (
     <>
       <Header />
       <Hero />
+      <Slider />
       <DropdownList />
       <OurAreas />
       <HowWeWork />
