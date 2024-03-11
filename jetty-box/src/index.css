@@ -94,6 +94,23 @@ button:hover {
   background: linear-gradient(180deg, #3a3938 0%, #202020 100%);
 }
 
+.bg-box {
+  background-image: url("./assets/bg-box.svg");
+}
+
+.box-text {
+  font-family: "Plateia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  background: linear-gradient(90.37deg, #d69b56 2.34%, #fddfbc 99.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

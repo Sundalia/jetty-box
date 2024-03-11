@@ -7,12 +7,14 @@ import HowWeWork from "./components/HowWeWork";
 import OurAreas from "./components/OurAreas";
 import DropdownList from "./components/DropdownList";
 import Slider from "./components/Slider";
+import Box from "./components/Box";
 
 export default function App() {
   return (
     <>
       <Header />
       <Hero />
+      <Box />
       <Slider />
       <DropdownList />
       <OurAreas />

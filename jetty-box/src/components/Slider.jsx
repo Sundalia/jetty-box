@@ -12,9 +12,7 @@ import { ServiceData } from "./utils/constants.js";
 export default function () {
   return (
     <div className="pt-16 px-4 pb-[89px]">
-      <h3 className="mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
-        Если...
-      </h3>
+
       <Swiper
         breakpoints={{
           375: {

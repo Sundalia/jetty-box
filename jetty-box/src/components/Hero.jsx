@@ -3,7 +3,7 @@ import mainboxShadow from "../assets/main-box-shadow.svg";
 
 function Hero() {
   return (
-    <div className="mt-10 px-4">
+    <div className="mt-10 px-4 pb-[75px]">
       <h1 className="font-['Plateia'] text-left uppercase leading-[123%] text-[26px]">
         Комплексные решения
       </h1>
