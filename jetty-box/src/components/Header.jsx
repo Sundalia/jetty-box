@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <header className="px-4 border-white min-w-[375px] top-3">
-      <nav className="flex justify-between items-center mt-3">
+      <nav className="flex justify-between items-center pt-3">
         <div className="w-16 h-9 rounded-[4px] p-[0.5px] bg-gradient-to-r from-gray-600  to-transparent">
           <div className="back rounded-[4px] h-full flex bg-[#2e2e2e] items-center justify-center">
             <span>RU</span>
@@ -33,7 +33,7 @@ function Header() {
 
         <p>Logo</p>
         <button
-          className="flex flex-col space-y-2 focus:outline-none"
+          className="bg-[#2e2e2e] flex flex-col space-y-2 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Меню"
         >

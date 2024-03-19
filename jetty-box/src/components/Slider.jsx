@@ -12,7 +12,6 @@ import { ServiceData } from "./utils/constants.js";
 export default function () {
   return (
     <div className="pt-16 px-4 pb-[89px]">
-
       <Swiper
         breakpoints={{
           375: {
@@ -22,7 +21,7 @@ export default function () {
         }}
         freeMode={true}
         modules={[FreeMode, Pagination]}
-        className="gap-2 overflow-visible "
+        className="gap-2 [overflow:overlay] "
       >
         {ServiceData.map((item) => (
           <SwiperSlide key={item.title}>
