@@ -8,6 +8,7 @@ import OurAreas from "./components/OurAreas";
 import DropdownList from "./components/DropdownList";
 import Slider from "./components/Slider";
 import Box from "./components/Box";
+import Marquee from "./components/Marquee";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Header />
       <Hero />
       <Box />
+      <Marquee />
       <Slider />
       <DropdownList />
       <OurAreas />

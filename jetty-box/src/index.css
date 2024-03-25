@@ -17,7 +17,7 @@
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
-  background-color: #3333336E;
+  background-color: #3333336e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -118,6 +118,24 @@ button:hover {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-text {
+  -webkit-text-stroke: 0.5px #fff;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
