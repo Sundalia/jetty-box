@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import styles from "./DropdownList.module.css";
 import { faq } from "./utils/constants";
-import marketing from "../assets/questions-marketing.svg";
 
 export default function DropdownList() {
   const [selected, setSelected] = useState(null);
@@ -62,7 +61,13 @@ export default function DropdownList() {
               }
             >
               {selected === i && (
-                <img src={marketing} alt="описание изображения"></img>
+                <div className="h-16">
+                  <img
+                    src={item.backgroundImage}
+                    alt="описание изображения"
+                    className={styles.backgroundImage}
+                  ></img>
+                </div>
               )}
 
               <p

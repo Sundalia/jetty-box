@@ -64,7 +64,7 @@
 .questionsArrow {
   width: 25px;
   height: 25px;
-  background: url(../assets/dropdown-shevron.svg);
+  background: url(../assets/dropdown-plus.svg);
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.2s ease-in-out;
@@ -74,6 +74,11 @@
   transform: rotate(180deg);
   transition: all 0.2s ease-in-out;
   filter: grayscale(100%);
+  background: url(../assets/dropdown-minus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
 }
 
 .questionsQuestion {
@@ -92,6 +97,7 @@
   font-weight: 400;
   font-size: 16px;
   overflow: hidden;
+  text-align: left;
 }
 
 .questionsAnswer {
@@ -108,4 +114,12 @@
 }
 .questionsAnkor {
   text-decoration: none;
+}
+
+.backgroundImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
 }
