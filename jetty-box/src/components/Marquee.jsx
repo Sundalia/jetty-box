@@ -27,7 +27,7 @@ function Marquee() {
             />
           </svg>
           <p className="marquee-text font-[plateia] font-normal text-base leading-17">
-            Практический опыт с 2018 года
+            Представительство - Европа и Россия
           </p>
           <svg
             width="4.000000"
@@ -69,7 +69,7 @@ function Marquee() {
             />
           </svg>
           <p className="marquee-text font-[plateia] font-normal text-base leading-17">
-            Практический опыт с 2018 года
+          Представительство - Европа и Россия
           </p>
         </div>
       </div>
