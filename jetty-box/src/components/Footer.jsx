@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import telegram from "../assets/tg-icon.svg";
 import vkontakte from "../assets/vk-icon.svg";
 import instagram from "../assets/instagram-icon.svg";
 import youtube from "../assets/youtube-icon.svg";
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <div className="mt-10 px-4 pb-[127px] bg-[#262525]">
       <div className="mt-3 h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
@@ -11,7 +13,7 @@ function Footer() {
         Logo
       </h3>
       <p className="font-['Proxima Nova'] font-light text-base mt-6 text-left">
-        ИП Дедюгин А.А
+        {t("dedugin")}
       </p>
       <button className="bg-white mt-4 h-[26px] flex items-center w-[128px] justify-center rounded rounded-s">
         <img src={telegram} alt="Описание изображения" className="" />

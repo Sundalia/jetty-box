@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import styles from "./DropdownList.module.css";
 import { faq } from "./utils/constants";
+import { useTranslation } from "react-i18next";
 
 export default function DropdownList() {
+  const { t } = useTranslation();
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -16,10 +18,10 @@ export default function DropdownList() {
   return (
     <div className="px-4 pb-[89px]">
       <h3 className="mb-3 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
-        Мы с этим поможем
+        {t("we-help")}
       </h3>{" "}
       <ul className={styles.questionsContainer}>
-        {faq.map((item, i) => (
+        {faq().map((item, i) => (
           <li
             className={
               selected === i
@@ -89,7 +91,7 @@ export default function DropdownList() {
                 >
                   <div className=" h-full flex bg-[#7D6137] items-center justify-center">
                     <span className="font-medium text-base">
-                      Отправить заявку
+                      {t("send-request")}
                     </span>
                   </div>
                 </button>

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -5,14 +6,14 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
 import { FreeMode } from "swiper/modules";
-
 import { ServiceData } from "./utils/constants.js";
 
 export default function () {
+  const { t } = useTranslation();
   return (
     <div className="pt-16 px-4 pb-[89px] overflow-hidden">
       <h3 className="mt-4 mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
-        если...
+        {t("if")}
       </h3>
       <Swiper
         breakpoints={{
@@ -25,8 +26,8 @@ export default function () {
         modules={[FreeMode]}
         className="gap-2 overflow-visible"
       >
-        {ServiceData.map((item) => (
-          <SwiperSlide key={item.title}>
+        {ServiceData().map((item) => (
+          <SwiperSlide key={item.id}>
             <div className="image-container flex flex-col border border-[#B7B7B7] gap-6 group relative shadow-lg rounded  text-white px-6 py-8 h-[268px] w-[187px] overflow-hidden cursor-pointer">
               <div
                 className="absolute inset-0 bg-cover bg-center"

@@ -1,3 +1,4 @@
+import i18n from "./18n";
 import income from "../../assets/slide-income.svg";
 import marketing from "../../assets/slide-marketing.svg";
 import processes from "../../assets/slide-processes.svg";
@@ -11,59 +12,67 @@ import questionsOutstaffing from "../../assets/questions-outstaffing.svg";
 import questionsProduct from "../../assets/questions-product.svg";
 import questionsResearch from "../../assets/questions-research.svg";
 
-export const ServiceData = [
-  {
-    content: "Вы строите маркетинговый отдел",
-    backgroundImage: marketing,
-  },
-  {
-    content: "Вам нужно понимать какую прибыль приносит каждый рекламный канал",
-    backgroundImage: income,
-  },
-  {
-    content: "Вам требуется усилить или обучить существующую команду",
-    backgroundImage: processes,
-  },
-  {
-    content: "Вам нужно создать продукт с 0 или доработать текущий продукт",
-    backgroundImage: product,
-  },
-  {
-    content:
-      "Вам нужна оптимизация процессов внутри отдела Продаж и отдела Маркетинга",
-    backgroundImage: testing,
-  },
-  {
-    content: "Вам нужно затестировать гипотезу",
-    backgroundImage: team,
-  },
-];
+export const ServiceData = () => {
+  return [
+    {
+      id: 1,
+      content: i18n.t("need-department"),
+      backgroundImage: marketing,
+    },
+    {
+      id: 2,
+      content: i18n.t("need-channel"),
+      backgroundImage: income,
+    },
+    {
+      id: 3,
+      content: i18n.t("need-optimisation"),
+      backgroundImage: processes,
+    },
+    {
+      id: 4,
+      content: i18n.t("neet-product"),
+      backgroundImage: product,
+    },
+    {
+      id: 5,
+      content: i18n.t("need-test"),
+      backgroundImage: testing,
+    },
+    {
+      id: 6,
+      content: i18n.t("need-team"),
+      backgroundImage: team,
+    },
+  ];
+};
 
-export const faq = [
-  {
-    question: "Создание маркетингового отдела под ключ",
-    answer: "Соберем маркетинговый отдел с 0",
-    backgroundImage: questionsMarketing,
-  },
-  {
-    question: "Исследование",
-    answer: "Проанализируем работу отдела и выявим проблемные зоны",
-    backgroundImage: questionsResearch,
-  },
-  {
-    question: "Создание и запуск продукта",
-    answer: "Создадим и запустим ваш продукт, учитывая ваши цели и бюджет",
-    backgroundImage: questionsProduct,
-  },
-  {
-    question: "Аутстафинг",
-    answer: "Подберем нужный персонал под ваши задачи",
-    backgroundImage: questionsOutstaffing,
-  },
-  {
-    question: "Реклама и аналтика",
-    answer:
-      "Создание комплекса маркетинговых систем и внедрение сквозной аналитики под ваш продукт",
-    backgroundImage: questionsAnalytics,
-  },
-];
+export const faq = () => {
+  return [
+    {
+      question: i18n.t("question-1"),
+      answer: i18n.t("answer-1"),
+      backgroundImage: questionsMarketing,
+    },
+    {
+      question: i18n.t("question-2"),
+      answer: i18n.t("answer-2"),
+      backgroundImage: questionsResearch,
+    },
+    {
+      question: i18n.t("question-3"),
+      answer: i18n.t("answer-3"),
+      backgroundImage: questionsProduct,
+    },
+    {
+      question: i18n.t("question-4"),
+      answer: i18n.t("answer-4"),
+      backgroundImage: questionsOutstaffing,
+    },
+    {
+      question: i18n.t("question-5"),
+      answer: i18n.t("answer-5"),
+      backgroundImage: questionsAnalytics,
+    },
+  ];
+};

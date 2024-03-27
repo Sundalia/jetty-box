@@ -1,11 +1,13 @@
 import plan from "../assets/how-we-work.svg";
+import { useTranslation } from "react-i18next";
 
 function HowWeWork() {
+  const { t } = useTranslation();
   return (
     <div className="mt-10 px-4 pb-[56px]">
       <div>
         <h3 className="mt-4 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
-          Как будем работать
+          {t("how-work")}
         </h3>
         <div className="ml-3 flex mt-8">
           <img
@@ -15,25 +17,24 @@ function HowWeWork() {
           />
           <div className="">
             <p className="text-left">
-              <strong>Проведем</strong>
-              <br /> Интервью
+              <strong>{t("conduct")}</strong>
+              <br /> {t("interview")}
             </p>
             <p className="text-left mt-10">
-              <strong>Составим план </strong>
-              <br /> взаимодействия
+              <strong>{t("plan")} </strong>
+              <br /> {t("interaction")}
             </p>
             <p className="text-left mt-10">
-              <strong>Соберем команду </strong>
-              <br /> По каждому звену будет ответственный человек
+              <strong>{t("team")} </strong>
+              <br /> {t("responsible-person")}
             </p>
             <p className="text-left mt-10">
-              <strong>Создадим систему </strong>
-              <br /> Визуализированная система, в которой будет видны действия
-              по каждому направлению
+              <strong>{t("create-system")} </strong>
+              <br /> {t("visualized-system")}
             </p>
             <p className="text-left mt-10">
-              <strong>Выведем </strong>
-              <br /> в работу
+              <strong>{t("implement")} </strong>
+              <br /> {t("to-work")}
             </p>
           </div>
         </div>
