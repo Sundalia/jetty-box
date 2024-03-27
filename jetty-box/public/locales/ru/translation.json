@@ -1,0 +1,24 @@
+{
+  "comprehensive-solutions": "Комплексные решения",
+  "building-marketing-department": "в построении отдела маркетинга",
+  "get-system-solution": "Получите в свой проект системный бокс решений, который увеличит вашу прибыль",
+  "get-audit": "Получить аудит проекта ",
+
+  "Solutions": "Решения",
+  "Development": "Разработка",
+  "Advertising": "Реклама",
+  "Design": "Дизайн",
+  "Telephony": "Телефония",
+  "CRM Systems": "CRM системы",
+  "Analytics": "Аналитика",
+
+  
+  "name": "Имя",
+  "profession": "Профессия",
+  "you-have-successfully-signed-up": "Вы успешно зарегистрировались!",
+  "sorry-something-went-wrong-try-again": "Что-то пошло не так! Попробуйте ещё раз.",
+  "new-place": "Новое место.",
+  "place-name": "Название",
+  "already-registered": "Уже зарегистрированы?",
+  "not-registered": "Ещё не зарегистрированы?"
+}

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { register } from "swiper/element/bundle";
+import "./components/utils/18n.js";
 
 register();
 

@@ -1,14 +1,16 @@
 import React, { useState, Fragment, useEffect, useRef } from "react";
-
 import { Listbox, Transition } from "@headlessui/react";
+import { useTranslation } from "react-i18next";
 
-const languages = [
-  { id: 1, name: "RU", unavailable: false },
-  { id: 2, name: "EN", unavailable: false },
-];
+const languages = ["ru", "en"];
 
 function Header() {
-  const [selected, setSelected] = useState(languages[0]);
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+    console.log("changeLanguage:", lng);
+    i18n.changeLanguage(lng);
+  };
+  const [selected, setSelected] = useState(i18n.resolvedLanguage);
 
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef();
@@ -48,12 +50,8 @@ function Header() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(25.6166 0.5) rotate(90) scale(0.5 25.6166)"
         >
-          <stop stop-color="#FFFFFF" />
-          <stop
-            offset="1.000000"
-            stop-color="#FFFFFF"
-            stop-opacity="0.000000"
-          />
+          <stop stopColor="#FFFFFF" />
+          <stop offset="1.000000" stopColor="#FFFFFF" stopOpacity="0.000000" />
         </radialGradient>
       </defs>
       <rect
@@ -61,7 +59,7 @@ function Header() {
         width="51.233292"
         height="1.000000"
         fill="url(#paint_radial_246_403_0)"
-        fill-opacity="1.000000"
+        fillOpacity="1.000000"
       />
     </svg>
   );
@@ -69,12 +67,19 @@ function Header() {
   return (
     <header className="px-4 border-white min-w-[375px] top-3">
       <nav className="flex justify-between items-center pt-3">
-        <Listbox value={selected} onChange={setSelected} className="">
+        <Listbox
+          value={selected}
+          onChange={(newValue) => {
+            setSelected(newValue);
+            changeLanguage(newValue);
+          }}
+          className="uppercase"
+        >
           <div className="relative w-16 h-9">
             <Listbox.Button className="flex cursor-default rounded py-1.5 pl-2 text-left  selector-shadow focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
               <div className="back rounded h-full flex bg-[#2e2e2e] items-center justify-center">
-                <span className="block truncate text-white">
-                  {selected.name}
+                <span className="block truncate text-white uppercase">
+                  {i18n.resolvedLanguage}
                 </span>
                 <span className="pointer-events-none inset-y-0 right-0 flex items-center pr-2">
                   <div className="ml-1">
@@ -133,7 +138,7 @@ function Header() {
                               selected ? "text-white " : "text-[#7D7D7D]"
                             }`}
                           >
-                            {language.name}
+                            {language}
                           </span>
                         </>
                       )}
@@ -186,15 +191,15 @@ function Header() {
             <div className="border h-[0.5px] border-opacity-60 border-white top-[54.75px] mx-[-20px]"></div>
             <section className="mt-6 flex flex-col items-start text-left">
               <h3 className="uppercase font-[Plateia] font-normal text-2xl leading-9">
-                Решения
+                {t("Solutions")}
               </h3>
               <ul className="mt-5 flex flex-col gap-y-7 text-base">
-                <li>Разработка</li>
-                <li>Реклама</li>
-                <li>Дизайн</li>
-                <li>Телефония</li>
-                <li>CRM системы</li>
-                <li>Аналитика</li>
+                <li>{t("Development")}</li>
+                <li>{t("Advertising")}</li>
+                <li>{t("Design")}</li>
+                <li>{t("Telephony")}</li>
+                <li>{t("CRM Systems")}</li>
+                <li>{t("Analytics")}</li>
               </ul>
               <p className="mt-[152px] mb-5">+7 (000) 000-00-00</p>
             </section>
