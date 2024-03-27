@@ -1,8 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, Fragment, useEffect, useRef } from "react";
 
-import langSelect from "../assets/lang-select.svg";
+import { Listbox, Transition } from "@headlessui/react";
+
+const languages = [
+  { id: 1, name: "RU", unavailable: false },
+  { id: 2, name: "EN", unavailable: false },
+];
 
 function Header() {
+  const [selected, setSelected] = useState(languages[0]);
+
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef();
 
@@ -22,20 +29,123 @@ function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const LanguageLine = () => (
+    <svg
+      width="52.000000"
+      height="1.000000"
+      viewBox="0 0 52 1"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <desc>Created with Pixso.</desc>
+      <defs>
+        <radialGradient
+          id="paint_radial_246_403_0"
+          cx="0.000000"
+          cy="0.000000"
+          r="1.000000"
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(25.6166 0.5) rotate(90) scale(0.5 25.6166)"
+        >
+          <stop stop-color="#FFFFFF" />
+          <stop
+            offset="1.000000"
+            stop-color="#FFFFFF"
+            stop-opacity="0.000000"
+          />
+        </radialGradient>
+      </defs>
+      <rect
+        id="Rectangle 1024"
+        width="51.233292"
+        height="1.000000"
+        fill="url(#paint_radial_246_403_0)"
+        fill-opacity="1.000000"
+      />
+    </svg>
+  );
+
   return (
     <header className="px-4 border-white min-w-[375px] top-3">
       <nav className="flex justify-between items-center pt-3">
-        <div className="w-16 h-9 rounded-[4px] p-[0.5px] bg-gradient-to-r from-gray-600  to-transparent">
-          <div className="back rounded-[4px] h-full flex bg-[#2e2e2e] items-center justify-center">
-            <span>RU</span>
-            {/* <img className="ml-1 w-3 h-3 bg-[#f4cfa4]" srs={langSelect} alt="Описание изображения" /> */}
-            <div className="ml-1">
-              <div className="h-[1px] mb-[-0.8px] w-3 bg-[#f4cfa4] rotate-[45deg]"></div>
-              <div className="ml-[9px] h-[1px] w-3 bg-[#f4cfa4] rotate-[135deg]"></div>
-            </div>
+        <Listbox value={selected} onChange={setSelected} className="">
+          <div className="relative w-16 h-9">
+            <Listbox.Button className="flex cursor-default rounded py-1.5 pl-2 text-left  selector-shadow focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+              <div className="back rounded h-full flex bg-[#2e2e2e] items-center justify-center">
+                <span className="block truncate text-white">
+                  {selected.name}
+                </span>
+                <span className="pointer-events-none inset-y-0 right-0 flex items-center pr-2">
+                  <div className="ml-1">
+                    <svg
+                      width="15.789879"
+                      height="8.581177"
+                      viewBox="0 0 15.7899 8.58118"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs />
+                      <rect
+                        id="Rectangle 1018"
+                        y="0.828491"
+                        width="1.000000"
+                        height="11.104889"
+                        transform="rotate(-45.7235 0.000000 0.828491)"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                      />
+                      <rect
+                        id="Rectangle 1019"
+                        width="1.000000"
+                        height="11.104889"
+                        transform="matrix(-0.70926 -0.704947 -0.704947 0.70926 15.7899 0.704956)"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </Listbox.Button>
+            <Transition
+              as={Fragment}
+              leave="transition ease-in duration-100"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Listbox.Options className="absolute mt-1 max-h-60 overflow-auto rounded bg-[#454545] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                {languages.map((language, languageIdx) => (
+                  <div key={languageIdx} className="relative">
+                    <Listbox.Option
+                      className={({ active }) =>
+                        `cursor-default select-none py-2 ${
+                          active ? "bg-opacity-100" : "bg-transparent"
+                        }`
+                      }
+                      value={language}
+                    >
+                      {({ selected }) => (
+                        <>
+                          <span
+                            className={` block truncate ${
+                              selected ? "text-white " : "text-[#7D7D7D]"
+                            }`}
+                          >
+                            {language.name}
+                          </span>
+                        </>
+                      )}
+                    </Listbox.Option>
+                    {languageIdx !== languages.length - 1 && <LanguageLine />}
+                  </div>
+                ))}
+              </Listbox.Options>
+            </Transition>
           </div>
-        </div>
-
+        </Listbox>
+        <div className="fixed top-16 w-72"></div>
         <p>Logo</p>
         <button
           className="bg-[#2e2e2e] flex flex-col space-y-2 focus:outline-none"
