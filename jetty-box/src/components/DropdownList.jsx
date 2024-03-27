@@ -87,12 +87,10 @@ export default function DropdownList() {
               {selected === i && (
                 <button
                   type="submit"
-                  className="p-0.5 h-12 rounded-[4px] mt-5 mb-5 w-full bg-gradient-to-r from-gray-400 via-[#7D6137] via-[#7D6137] to-[#7D6137]"
+                  className="mt-5 mb-5 w-full"
                 >
-                  <div className=" h-full flex bg-[#7D6137] items-center justify-center">
-                    <span className="font-medium text-base">
-                      {t("send-request")}
-                    </span>
+                  <div className="flex items-center justify-center main-button">
+                    <span>{t("send-request")}</span>
                   </div>
                 </button>
               )}

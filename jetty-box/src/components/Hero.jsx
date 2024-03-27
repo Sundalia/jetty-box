@@ -21,10 +21,12 @@ function Hero() {
           {t("get-system-solution")}
         </p>
       </div>
-      <div className="p-0.5 button-shadow h-12 rounded-[4px] mt-9 w-full bg-gradient-to-r from-white via-[#7D6137] via-[#7D6137] to-[#7D6137]">
-        <div className="back h-full flex bg-[#7D6137] items-center justify-center">
-          <span>{t("get-audit")}</span>
-        </div>
+      <div className="mt-9">
+        <button className="w-[339px]">
+          <div className="main-button button-shadow flex items-center justify-center">
+            <span>{t("get-audit")}</span>
+          </div>
+        </button>
       </div>
     </div>
   );

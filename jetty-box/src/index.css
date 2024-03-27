@@ -62,10 +62,6 @@ button:hover {
   outline: 4px auto -webkit-focus-ring-color;
 } */
 
-.button-shadow {
-  box-shadow: 0 5px 0 0 #5e4827;
-}
-
 .border-gradient {
   position: absolute;
   top: 0;
@@ -135,22 +131,32 @@ button:hover {
   }
 }
 
+.main-button {
+  font-weight: 500;
+  background: linear-gradient(#7d6137, #7d6137, #7d6137) padding-box,
+    linear-gradient(
+        175deg,
+        rgba(255, 255, 255, 0.43),
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      )
+      border-box;
+  background-color: #7d6137;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.button-shadow {
+  box-shadow: 0 5px 0 0 #5e4827;
+}
+
 .selector-shadow {
   background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
     linear-gradient(160deg, rgb(82, 82, 82), rgba(82, 82, 82, 0)) border-box;
   border: 1px solid transparent;
   border-radius: 4px;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

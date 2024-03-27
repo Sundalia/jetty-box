@@ -24,11 +24,8 @@ function Application() {
             className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
           ></input>
         </div>
-        <button
-          type="submit"
-          className="p-0.5 h-12 rounded-[4px] mt-5 mb-5 w-full bg-gradient-to-r from-gray-400 via-[#7D6137] via-[#7D6137] to-[#7D6137]"
-        >
-          <div className="back h-full flex bg-[#7D6137] items-center justify-center">
+        <button type="submit" className="mt-5 mb-5 w-full">
+          <div className="main-button flex items-center justify-center">
             <span>{t("send")}</span>
           </div>
         </button>
