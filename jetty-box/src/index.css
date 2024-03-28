@@ -69,31 +69,6 @@ button:hover {
   );
 }
 
-
-.image-container {
-  position: relative;
-  background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
-    linear-gradient(180deg, rgb(30, 30, 30), rgba(58, 57, 56, 0)) border-box;
-  background-color: transparent;
-  /* background: linear-gradient(
-    180deg,
-    rgba(58, 57, 56, 0),
-    rgb(30, 30, 30) 100%
-  ); */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: wrap;
-}
-
-.image-container div {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-
 .bg-box {
   background-image: url("./assets/bg-box.svg");
 }

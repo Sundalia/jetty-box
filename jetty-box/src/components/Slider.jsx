@@ -28,9 +28,9 @@ export default function () {
       >
         {ServiceData().map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="flex flex-col gap-6 group relative rounded  text-white px-6 py-8 h-[268px] w-[187px] overflow-hidden ">
+            <div className="selector-shadow flex flex-col gap-6 group relative rounded  text-white px-6 py-8 h-[268px] w-[187px] overflow-hidden ">
               <div
-                className="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-tl before:from-[#202020] before:to-transparent before:z-[-5] z-10 bg-gradient-to-tl from-white to-black absolute inset-0 bg-cover bg-center"
+                className=" before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-tl before:from-[#202020] before:to-transparent before:z-[-5] z-10 bg-gradient-to-tl from-white to-black absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
               />
               <div className="">
