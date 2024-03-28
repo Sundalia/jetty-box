@@ -8,7 +8,7 @@ function Footer() {
   const { t } = useTranslation();
   return (
     <div className="px-4 pb-[127px] bg-[#262525] relative z-10">
-      <div className="mt-3 h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
       <h3 className="mt-4 font-['Plateia'] text-left uppercase text-xl">
         Logo
       </h3>
