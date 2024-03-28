@@ -21,7 +21,7 @@ function OurAreas() {
         <h3 className="font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("covering-a-wide")}
         </h3>
-        <div className="flex mt-8">
+        <div className="flex mt-8 justify-center">
           <ul className="grid gap-2 grid-cols-2">
             <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center grid-border rounded rounded-s px-3 py-2">
               <img src={events} />

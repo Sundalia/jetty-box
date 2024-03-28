@@ -37,7 +37,7 @@ function HowWeWork() {
               <strong>{t("create-system")} </strong>
               <br /> {t("visualized-system")}
             </p>
-            <p className="text-left mt-16 z-10 relative">
+            <p className="text-left mt-14 z-10 relative">
               <strong>{t("implement")} </strong>
               <br /> {t("to-work")}
             </p>
