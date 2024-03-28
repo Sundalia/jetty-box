@@ -3,7 +3,7 @@ import planet from "../assets/application-planet.svg";
 function Application() {
   const { t } = useTranslation();
   return (
-    <div className="mt-10 px-4 pb-[79px] relative">
+    <div className="mt-10 px-4 pb-[79px] relative overflow-hidden">
       <div>
         <h3 className="mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("where-to-start")}
@@ -12,7 +12,8 @@ function Application() {
       </div>
       <img
         src={planet}
-        className="absolute translate-y-[55%] translate-x-[30%] overflow-[overlay]"
+        style={{ overflowBlock: "hidden" }}
+        className="absolute translate-y-[55%] translate-x-[30%]"
       />
       <form className="flex flex-col mt-6">
         <div className="flex flex-col gap-[10px]">

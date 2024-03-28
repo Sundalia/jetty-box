@@ -11,11 +11,12 @@ import planet from "../assets/grid-planet.svg";
 function OurAreas() {
   const { t } = useTranslation();
   return (
-    <div className="px-4 pb-[56px]">
-      <div className="relative">
+    <div className=" px-4 pb-[56px]">
+      <div className="relative overflow-hidden">
         <img
           src={planet}
-          className="absolute right-[-65px] top-[384px] overflow-[overlay]"
+          style={{ overflowBlock: "hidden" }}
+          className="absolute translate-y-[120%] translate-x-[40%]"
         />
         <h3 className="font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("covering-a-wide")}

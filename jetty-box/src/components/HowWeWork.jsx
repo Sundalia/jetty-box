@@ -12,7 +12,7 @@ function HowWeWork() {
         </h3>
         <img
           src={planet}
-          className="absolute left-[-150px] top-[461px] overflow-[overlay]"
+          className="absolute overflow-[overlay] left-[-150px] top-[461px] overflow-[overlay]"
         />
         <div className="ml-3 flex mt-8">
           <img
