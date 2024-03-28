@@ -1,14 +1,19 @@
 import { useTranslation } from "react-i18next";
+import planet from "../assets/application-planet.svg";
 function Application() {
   const { t } = useTranslation();
   return (
-    <div className="mt-10 px-4 pb-[79px]">
+    <div className="mt-10 px-4 pb-[79px] relative">
       <div>
-        <h3 className="mt-4 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+        <h3 className="mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("where-to-start")}
         </h3>
         <p className="text-left w-[345px]">{t("we-audit")}</p>
       </div>
+      <img
+        src={planet}
+        className="absolute translate-y-[55%] translate-x-[30%] overflow-[overlay]"
+      />
       <form className="flex flex-col mt-6">
         <div className="flex flex-col gap-[10px]">
           <input
