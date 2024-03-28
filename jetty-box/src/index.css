@@ -37,7 +37,6 @@ a:hover {
 body {
   color: rgba(255, 255, 255, 0.87);
   background-color: #2e2e2e;
-
 }
 
 button {
@@ -129,6 +128,13 @@ button:hover {
 .selector-shadow {
   background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
     linear-gradient(160deg, rgb(82, 82, 82), rgba(82, 82, 82, 0)) border-box;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.grid-border {
+  background: linear-gradient(#1E1E1E, #1E1E1E) padding-box,
+    linear-gradient(180deg, rgb(82, 82, 82), rgba(82, 82, 82, 0)) border-box;
   border: 1px solid transparent;
   border-radius: 4px;
 }

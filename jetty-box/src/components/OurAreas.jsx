@@ -6,44 +6,49 @@ import IT from "../assets/areas-IT.svg";
 import logistics from "../assets/areas-logistics.svg";
 import processing from "../assets/areas-processing.svg";
 import repair from "../assets/areas-repair.svg";
+import planet from "../assets/grid-planet.svg";
 
-function HowWeWork() {
+function OurAreas() {
   const { t } = useTranslation();
   return (
     <div className="px-4 pb-[56px]">
-      <div>
+      <div className="relative">
+        <img
+          src={planet}
+          className="absolute right-[-65px] top-[384px] overflow-[overlay]"
+        />
         <h3 className="font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("covering-a-wide")}
         </h3>
         <div className="flex mt-8">
           <ul className="grid gap-2 grid-cols-2">
-            <li className="bg-[#1E1E1E] leading-5 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center border-[#B7B7B7] border-gradient-to-r from-transparent to-[#545454] rounded rounded-s px-3 py-2">
+            <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center grid-border rounded rounded-s px-3 py-2">
               <img src={events} />
               <p>{t("event-organization")}</p>
             </li>
-            <li className="bg-[#1E1E1E] leading-5 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center border-[#B7B7B7] border-gradient-to-r from-transparent to-[#545454] rounded rounded-s px-3 py-2">
+            <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center text-center grid-border  rounded rounded-s px-3 py-2">
               <img src={design} />
               <p>{t("design-products")}</p>
             </li>
 
-            <li className="bg-[#1E1E1E] leading-5 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center border-[#B7B7B7] border-gradient-to-r from-transparent to-[#545454] rounded rounded-s px-3 py-2">
+            <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center text-center grid-border  rounded rounded-s px-3 py-2">
               <img src={IT} />
               <p>{t("it-services")}</p>
             </li>
 
-            <li className="bg-[#1E1E1E] leading-5 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center border-[#B7B7B7] border-gradient-to-r from-transparent to-[#545454] rounded rounded-s px-3 py-2">
+            <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center text-center grid-border  rounded rounded-s px-3 py-2">
               <img src={logistics} />
               <p>{t("logistics")}</p>
             </li>
-            <li className="bg-[#1E1E1E] leading-5 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center border-[#B7B7B7] border-gradient-to-r from-transparent to-[#545454] rounded rounded-s px-3 py-2">
+            <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center text-center grid-border  rounded rounded-s px-3 py-2">
               <img src={data} />
               <p>{t("data-analysis")}</p>
             </li>
-            <li className="bg-[#1E1E1E] leading-5 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center border-[#B7B7B7] border-gradient-to-r from-transparent to-[#545454] rounded rounded-s px-3 py-2">
+            <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center text-center grid-border  rounded rounded-s px-3 py-2">
               <img src={processing} />
               <p>{t("recycling-raw-materials")}</p>
             </li>
-            <li className="bg-[#1E1E1E] leading-5 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center border text-center border-[#B7B7B7] border-gradient-to-r from-transparent to-[#545454] rounded rounded-s px-3 py-2">
+            <li className="bg-[#1E1E1E] leading-5 z-10 w-[168px] h-[172px] gap-4 flex flex-col items-center justify-center text-center grid-border  rounded rounded-s px-3 py-2">
               <img src={repair} />
               <p>{t("repair-production")}</p>
             </li>
@@ -54,4 +59,4 @@ function HowWeWork() {
   );
 }
 
-export default HowWeWork;
+export default OurAreas;
