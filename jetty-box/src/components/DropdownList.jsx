@@ -85,10 +85,7 @@ export default function DropdownList() {
                 {item.answer}
               </p>
               {selected === i && (
-                <button
-                  type="submit"
-                  className="mt-5 mb-5 w-full"
-                >
+                <button type="submit" className="mt-5 mb-5 w-full">
                   <div className="flex items-center justify-center main-button">
                     <span>{t("send-request")}</span>
                   </div>

@@ -7,14 +7,19 @@ import "swiper/css/free-mode";
 
 import { FreeMode } from "swiper/modules";
 import { ServiceData } from "./utils/constants.js";
+import planet from "../assets/planet-slider.svg";
 
 export default function () {
   const { t } = useTranslation();
   return (
-    <div className="pt-16 px-4 pb-[89px] overflow-hidden">
+    <div className="pt-16 px-4 pb-[89px] overflow-hidden ">
       <h3 className="mt-4 mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
         {t("if")}
       </h3>
+      <img
+        src={planet}
+        className="absolute right-0 top-[82px] overflow-[overlay]"
+      />
       <Swiper
         breakpoints={{
           375: {

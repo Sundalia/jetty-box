@@ -17,8 +17,10 @@ export default function App() {
       <Hero />
       <Box />
       <Marquee />
-      <Slider />
-      <DropdownList />
+      <div className="relative">
+        <Slider />
+        <DropdownList />
+      </div>
       <OurAreas />
       <HowWeWork />
       <Application />
