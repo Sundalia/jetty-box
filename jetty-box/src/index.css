@@ -75,6 +75,11 @@ button:hover {
 .bg-box {
   background-image: url("./assets/bg-box.svg");
 }
+@media (min-width: 760px) {
+  .bg-box {
+    background-image: none;
+  }
+}
 
 .box-text {
   font-family: "Plateia";
