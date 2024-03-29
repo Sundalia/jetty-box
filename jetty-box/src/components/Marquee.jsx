@@ -4,12 +4,10 @@ import { useTranslation } from "react-i18next";
 function Marquee() {
   const { t } = useTranslation();
   return (
-    <div class="overflow-x-hidden mt-20">
-      <div class="">
-        <div class="marquee inline-flex items-center gap-x-6 overflow-hidden whitespace-nowrap py-4 text-5xl font-bold leading-relaxed text-gray-50 justify-center">
-          <p className="marquee-text font-[plateia] font-normal text-base leading-17">
-            {t("practical-experience")}
-          </p>
+    <div className="overflow-x-hidden mt-20 md:-mt-14 md:inset-x-0 md:absolute md:px-0">
+      <div className="marquee-text  font-[plateia] font-normal text-base leading-17 md:text-[32px]">
+        <div class="marquee inline-flex items-center gap-x-6 overflow-hidden whitespace-nowrap py-4 font-bold leading-relaxed text-gray-50 justify-center">
+          <p>{t("ractical-eperience")}</p>
           <svg
             width="4.000000"
             height="4.000000"
@@ -27,9 +25,7 @@ function Marquee() {
               fill-opacity="1.000000"
             />
           </svg>
-          <p className="marquee-text font-[plateia] font-normal text-base leading-17">
-            {t("presence")}
-          </p>
+          <p>{t("presence")}</p>
           <svg
             width="4.000000"
             height="4.000000"
@@ -47,9 +43,7 @@ function Marquee() {
               fill-opacity="1.000000"
             />
           </svg>
-          <p className="marquee-text font-[plateia] font-normal text-base leading-17">
-            {t("practical-experience")}
-          </p>
+          <p>{t("practical-experience")}</p>
           <svg
             width="4.000000"
             height="4.000000"
@@ -67,9 +61,7 @@ function Marquee() {
               fill-opacity="1.000000"
             />
           </svg>
-          <p className="marquee-text font-[plateia] font-normal text-base leading-17">
-            {t("presence")}
-          </p>
+          <p className="">{t("presence")}</p>
         </div>
       </div>
     </div>
