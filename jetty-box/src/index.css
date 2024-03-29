@@ -17,12 +17,16 @@
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
-  background-color: #3333336e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 1170px;
 }
 
 a {
@@ -36,7 +40,7 @@ a:hover {
 
 body {
   color: rgba(255, 255, 255, 0.87);
-  background-color: #2e2e2e;
+  background-color: #2c2c2c;
 }
 
 button {
@@ -133,7 +137,7 @@ button:hover {
 }
 
 .grid-border {
-  background: linear-gradient(#1E1E1E, #1E1E1E) padding-box,
+  background: linear-gradient(#1e1e1e, #1e1e1e) padding-box,
     linear-gradient(180deg, rgb(82, 82, 82), rgba(82, 82, 82, 0)) border-box;
   border: 1px solid transparent;
   border-radius: 4px;

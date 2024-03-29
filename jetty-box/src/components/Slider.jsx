@@ -13,7 +13,7 @@ export default function () {
   const { t } = useTranslation();
   return (
     <div className="pt-16 px-4 pb-[89px] overflow-hidden ">
-      <h3 className="mt-4 mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+      <h3 className="md:leading-[131%] md:text-[42px] mt-4 mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
         {t("if")}
       </h3>
       <img

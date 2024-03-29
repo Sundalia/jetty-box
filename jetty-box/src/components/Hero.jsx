@@ -6,11 +6,11 @@ import { useTranslation } from "react-i18next";
 function Hero() {
   const { t } = useTranslation();
   return (
-    <div className="mt-10 px-4 pb-[75px]">
-      <h1 className="font-['Plateia'] text-left uppercase leading-[123%] text-[26px]">
+    <div className="mt-10 md:mt-40 px-4 md:px-0 pb-[75px]">
+      <h1 className="font-['Plateia'] text-left md:leading-[131%] md:text-[42px] uppercase leading-[123%] text-[26px]">
         {t("comprehensive-solutions")}
       </h1>
-      <h3 className="font-sans font-normal text-base leading-4 mt-2 text-left">
+      <h3 className="font-sans leading-4 mt-2 text-left">
         {t("building-marketing-department")}
       </h3>
       <img src={mainbox} alt="Описание изображения" className="mt-11 m-auto" />

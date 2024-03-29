@@ -18,7 +18,7 @@ function OurAreas() {
           style={{ overflowBlock: "hidden" }}
           className="absolute translate-y-[120%] translate-x-[40%]"
         />
-        <h3 className="font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+        <h3 className="md:leading-[131%] md:text-[42px] font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("covering-a-wide")}
         </h3>
         <div className="flex mt-8 justify-center">

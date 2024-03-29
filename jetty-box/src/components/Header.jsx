@@ -65,8 +65,8 @@ function Header() {
   );
 
   return (
-    <header className="px-4 border-white min-w-[375px] top-3">
-      <nav className="flex justify-between items-center pt-3">
+    <header className="md:inset-x-0 md:absolute w-full md:px-0 px-4 border-white min-w-[375px] top-3 md:top-0 bg-[#333333_43%] md:bg-[#333333]">
+      <nav className="md:px-4 md:h-[70px] md:max-w-[1170px] md:m-auto flex justify-between items-center pt-3 md:pt-0">
         <Listbox
           value={selected}
           onChange={(newValue) => {
@@ -151,9 +151,10 @@ function Header() {
           </div>
         </Listbox>
         <div className="fixed top-16 w-72"></div>
-        <p>Logo</p>
+        <p className="md:text-xl">Logo</p>
+        <p className="hidden md:block">+7 (000) 000-00-00</p>
         <button
-          className="bg-[#2e2e2e] flex flex-col space-y-2 focus:outline-none"
+          className="bg-[#2e2e2e] md:hidden flex flex-col space-y-2 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Меню"
         >
@@ -279,7 +280,20 @@ function Header() {
           </div>
         )}
       </nav>
-      <div className="mt-3 h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
+
+      <div className="mt-3 md:mt-0 h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      <div className="hidden md:block bg-[#2c2c2c] w-full ">
+        <nav className="md:max-w-[1170px] m-auto md:px-4">
+          <ul className="pt-[14px] flex gap-x-12 justify-left">
+            <li>{t("Development")}</li>
+            <li>{t("Advertising")}</li>
+            <li>{t("Design")}</li>
+            <li>{t("Telephony")}</li>
+            <li>{t("CRM Systems")}</li>
+            <li>{t("Analytics")}</li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
