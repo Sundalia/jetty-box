@@ -31,7 +31,7 @@ export const ServiceData = () => {
     },
     {
       id: 4,
-      content: i18n.t("neet-product"),
+      content: i18n.t("need-product"),
       backgroundImage: product,
     },
     {
