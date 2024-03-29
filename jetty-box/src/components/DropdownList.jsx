@@ -16,8 +16,8 @@ export default function DropdownList() {
   };
 
   return (
-    <div className="px-4 pb-[89px]">
-      <h3 className="md:leading-[131%] md:text-[42px] mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+    <div className="px-4 pb-[89px] ">
+      <h3 className="md:leading-[131%] md:text-[32px] mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] md:max-w-full leading-normal">
         {t("we-help")}
       </h3>{" "}
       <ul className={styles.questionsContainer}>
@@ -63,7 +63,7 @@ export default function DropdownList() {
               }
             >
               {selected === i && (
-                <div className="h-16">
+                <div className="h-16 sm:h-[119px] md:h-[154px]">
                   <img
                     src={item.backgroundImage}
                     alt="описание изображения"

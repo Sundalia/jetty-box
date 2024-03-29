@@ -18,7 +18,7 @@ import testing from "../assets/slide-testing.svg";
 export default function () {
   const { t } = useTranslation();
   return (
-    <div className="pt-16 px-4 pb-[89px] overflow-hidden ">
+    <div className="pt-16 px-4 pb-[89px] mb:pb-3 overflow-hidden ">
       <h3 className="md:leading-[131%] md:text-[42px] mt-4 mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
         {t("if")}
       </h3>
@@ -62,7 +62,7 @@ export default function () {
           </SwiperSlide>
         ))}
       </Swiper>
-      <section className="hidden md:grid grid-cols-3 grid-rows-4 gap-x-[30px] gap-y-6">
+      <section className="hidden md:grid grid-cols-3 grid-rows-3 gap-x-[30px] gap-y-6">
         <div className="order-1 row-start-1 row-end-3 selector-shadow flex flex-col gap-6 group relative rounded  text-white px-5 py-4 h-[370px] max-w-[370px] overflow-hidden ">
           <div
             className="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-tl before:from-[#202020] before:to-transparent before:z-[-5] z-10 bg-gradient-to-tl from-white to-black absolute inset-0 bg-cover bg-center"
