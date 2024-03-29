@@ -5,7 +5,7 @@ function Application() {
   return (
     <div className="mt-10 px-4 pb-[79px] relative overflow-hidden">
       <div>
-        <h3 className="md:leading-[131%] md:text-[42px] mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+        <h3 className="md:leading-[131%] md:text-[32px] mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("where-to-start")}
         </h3>
         <p className="text-left w-[345px]">{t("we-audit")}</p>

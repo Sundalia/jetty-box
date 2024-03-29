@@ -7,7 +7,7 @@ function HowWeWork() {
   return (
     <div className="mt-10 px-4 pb-[56px]">
       <div className="relative">
-        <h3 className="md:leading-[131%] md:text-[42px] mt-4 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+        <h3 className="md:leading-[131%] md:text-[32px] mt-4 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
           {t("how-work")}
         </h3>
         <img
