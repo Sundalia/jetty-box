@@ -3,19 +3,21 @@ import planet from "../assets/application-planet.svg";
 function Application() {
   const { t } = useTranslation();
   return (
-    <div className="mt-10 px-4 pb-[79px] relative overflow-hidden">
-      <div>
-        <h3 className="md:leading-[131%] md:text-[32px] mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+    <div className="md:flex mt-10 px-4 pb-[79px] relative overflow-hidden md:gap-x-[110px]">
+      <div className="max-w-[670px]">
+        <h3 className="min-w-[300px] max-w-[670px] md:leading-[131%] md:text-[32px] mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase md:normal-case text-2xl leading-normal">
           {t("where-to-start")}
         </h3>
-        <p className="text-left w-[345px]">{t("we-audit")}</p>
+        <p className="text-left max-w-[345px] md:max-w-[480px]">
+          {t("we-audit")}
+        </p>
       </div>
       <img
         src={planet}
         style={{ overflowBlock: "hidden" }}
         className="absolute translate-y-[55%] translate-x-[30%]"
       />
-      <form className="flex flex-col mt-6">
+      <form className="flex flex-col mt-6 md:w-[370px]">
         <div className="flex flex-col gap-[10px]">
           <input
             placeholder={t("name")}
