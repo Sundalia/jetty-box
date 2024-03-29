@@ -287,10 +287,10 @@ function Header() {
           <ul className="pt-[14px] flex gap-x-12 justify-left">
             <li>{t("Development")}</li>
             <li>{t("Advertising")}</li>
+            <li>{t("social-networks")}</li>
             <li>{t("Design")}</li>
             <li>{t("Telephony")}</li>
             <li>{t("CRM Systems")}</li>
-            <li>{t("Analytics")}</li>
           </ul>
         </nav>
       </div>

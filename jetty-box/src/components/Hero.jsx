@@ -6,22 +6,30 @@ import { useTranslation } from "react-i18next";
 function Hero() {
   const { t } = useTranslation();
   return (
-    <div className="mt-10 md:mt-40 px-4 md:px-0 pb-[75px]">
-      <h1 className="font-['Plateia'] text-left md:leading-[131%] md:text-[42px] uppercase leading-[123%] text-[26px]">
+    <div className="md:justify-items-start grid-rows-auto mt-10 md:mt-40 px-4 md:px-4 pb-[75px] md:grid md:grid-cols-2">
+      <h1 className="md:row-start-1 md:row-end-2 md:col-span-1 md:col-start-1 font-['Plateia'] text-left md:leading-[131%] md:text-[42px] uppercase leading-[123%] text-[26px]">
         {t("comprehensive-solutions")}
       </h1>
-      <h3 className="font-sans leading-4 mt-2 text-left">
+      <h3 className="md:text-2xl md:row-start-2 md:col-span-1 md:col-start-1 font-sans leading-4 mt-2 md:mt-7 text-left">
         {t("building-marketing-department")}
       </h3>
-      <img src={mainbox} alt="Описание изображения" className="mt-11 m-auto" />
-      <img src={mainboxShadow} alt="Описание изображения" className="m-auto" />
-      <div className="mt-8 flex items-center justify-center gap-6">
+      <img
+        src={mainbox}
+        alt="Описание изображения"
+        className="md:w-[365px] md:h-[447px] md:col-span-1 md:col-start-2 md:row-end-6  mt-11 md:mt-0 m-auto md:row-start-1"
+      />
+      <img
+        src={mainboxShadow}
+        alt="Описание изображения"
+        className="md:hidden m-auto "
+      />
+      <div className="md:row-start-3 md:col-span-1 md:col-start-1  mt-8 md:mt-24 flex items-center justify-center gap-6">
         <img src={magic} />
         <p className="font-gilroy text-xs leading-4 text-left w-[267px]">
           {t("get-system-solution")}
         </p>
       </div>
-      <div className="mt-9">
+      <div className="mt-9 md:mt-4 md:col-span-1 md:col-start-1 md:row-start-4">
         <button className="w-[339px]">
           <div className="main-button button-shadow flex items-center justify-center">
             <span>{t("get-audit")}</span>
