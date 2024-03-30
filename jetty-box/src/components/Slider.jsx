@@ -28,11 +28,12 @@ export default function () {
         >
           <swiper-container
             slides-per-view="auto"
-            spaceBetween={40}
             scrollbar-clickable="true"
             mousewheel-invert="true"
+            loop="true"
+            initialSlide="0"
+            centeredSlides="true"
             className="overflow-visible cursor-pointer"
-            style={{ cssMode: "true" }}
           >
             {ServiceData().map((item) => (
               <swiper-slide
