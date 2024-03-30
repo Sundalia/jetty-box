@@ -15,7 +15,7 @@ function Application() {
       <img
         src={planet}
         style={{ overflowBlock: "hidden" }}
-        className="absolute translate-y-[55%] translate-x-[30%]"
+        className="md:hidden absolute translate-y-[55%] translate-x-[30%]"
       />
       <form className="flex flex-col mt-6 md:w-[370px]">
         <div className="flex flex-col gap-[10px]">

@@ -1,4 +1,5 @@
 import plan from "../assets/how-we-work.svg";
+import desktopPlan from "../assets/desktop-plan.svg";
 import { useTranslation } from "react-i18next";
 import planet from "../assets/how-we-work-planet.svg";
 
@@ -7,14 +8,14 @@ function HowWeWork() {
   return (
     <div className="mt-10 px-4 pb-[56px]">
       <div className="relative">
-        <h3 className="md:leading-[131%] md:text-[32px] mt-4 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+        <h3 className="md:leading-[131%] md:text-[32px] mb-9 md:mb-24 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] md:max-w-full leading-normal">
           {t("how-work")}
         </h3>
         <img
           src={planet}
-          className="absolute overflow-[overlay] left-[-150px] top-[461px] overflow-[overlay]"
+          className="md:hidden absolute overflow-[overlay] left-[-150px] top-[461px] overflow-[overlay]"
         />
-        <div className="ml-3 flex mt-8">
+        <div className="md:hidden ml-3 flex mt-8">
           <img
             src={plan}
             alt="Описание изображения"
@@ -40,6 +41,36 @@ function HowWeWork() {
             <p className="text-left mt-14 z-10 relative">
               <strong>{t("implement")} </strong>
               <br /> {t("to-work")}
+            </p>
+          </div>
+        </div>
+
+        <div className="hidden md:flex ml-3 mt-8 relative justify-center">
+          <img
+            src={desktopPlan}
+            alt="Описание изображения"
+            className="h-[515px] -mt-[123PX] max-w-[1040px] w-full"
+          />
+          <div className="grid grid-cols-5 grid-rows-2 absolute text-[21px] leading-6 tracking-[0%]">
+            <p className="text-left row-start-1 col-start-1 max-w-[216px] h-[140px] translate-y-[34%]">
+              <strong>{t("conduct")}</strong>{" "}
+              <span className="lowercase">{t("interview")}</span>
+            </p>
+            <p className="text-center row-start-2 col-start-2 translate-x-[-20%] translate-y-[54%]">
+              <strong>{t("plan")} </strong>
+              <br /> <span className="lowercase">{t("interaction")}</span>
+            </p>
+            <p className="absolute top-[-50px] text-center row-start-1 col-start-3 w-[298px] h-[140px] translate-y-[34%] translate-x-[-25%]">
+              <strong>{t("team")} </strong>
+              <br /> {t("responsible-person")}
+            </p>
+            <p className="text-center z-10 row-start-2 col-start-4 w-[298px] translate-x-[-20%] translate-y-[54%]">
+              <strong>{t("create-system")} </strong>
+              <br /> {t("visualized-system")}
+            </p>
+            <p className="text-right row-start-1 col-start-5 max-w-[216px] h-[140px] translate-y-[34%]">
+              <strong>{t("implement")} </strong>
+              {t("to-work")}
             </p>
           </div>
         </div>
