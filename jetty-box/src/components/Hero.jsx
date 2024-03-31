@@ -8,11 +8,11 @@ function Hero() {
   const { t } = useTranslation();
 
   return (
-    <div className="md:justify-items-start grid-rows-auto mt-10 md:mt-40 px-4 md:px-4 pb-[75px] md:grid md:grid-cols-2">
+    <div className="relative md:justify-items-start grid-rows-auto mt-10 md:mt-40 px-4 md:px-4 pb-[75px] md:grid md:grid-cols-2">
       <h1 className="md:row-start-1 md:row-end-2 md:col-span-1 md:col-start-1 font-['Plateia'] text-left md:leading-[131%] md:text-[42px] uppercase leading-[123%] text-[26px]">
         {t("comprehensive-solutions")}
       </h1>
-      <h3 className=" md:text-2xl md:row-start-2 md:col-span-1 md:col-start-1 font-sans leading-4 mt-2 md:mt-7 text-left">
+      <h3 className="absolute md:text-2xl md:row-start-2 md:col-span-1 md:col-start-1 font-sans leading-4 mt-2 md:mt-7 text-left">
         {/* {t("building-marketing-department")} */}
         <ReactTyped
           strings={[
@@ -32,7 +32,7 @@ function Hero() {
       <img
         src={mainbox}
         alt="Описание изображения"
-        className="md:w-[365px] md:h-[447px] md:col-span-1 md:col-start-2 md:row-end-6  mt-11 md:mt-0 m-auto md:row-start-1"
+        className="md:w-[365px] md:h-[447px] md:col-span-1 md:col-start-2 md:row-end-6  mt-16 md:mt-0 m-auto md:row-start-1"
       />
       <img
         src={mainboxShadow}
