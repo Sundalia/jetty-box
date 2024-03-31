@@ -76,7 +76,7 @@ function Header() {
           className="uppercase"
         >
           <div className="relative w-16 h-9">
-            <Listbox.Button className="flex cursor-default rounded py-1.5 pl-2 text-left  selector-shadow focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+            <Listbox.Button className="flex cursor-pointer hover:bg-gray-400 hover:opacity-80 rounded py-1.5 pl-2 text-left  selector-shadow focus:outline-none">
               <div className="back rounded h-full flex bg-[#2e2e2e] items-center justify-center">
                 <span className="block truncate text-white uppercase">
                   {i18n.resolvedLanguage}
@@ -120,12 +120,12 @@ function Header() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute mt-1 max-h-60 overflow-auto rounded bg-[#454545] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+              <Listbox.Options className=" absolute mt-1 max-h-60 overflow-auto rounded bg-[#454545] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
                 {languages.map((language, languageIdx) => (
                   <div key={languageIdx} className="relative">
                     <Listbox.Option
                       className={({ active }) =>
-                        `cursor-default select-none py-2 ${
+                        `lang-button select-none py-2 ${
                           active ? "bg-opacity-100" : "bg-transparent"
                         }`
                       }
@@ -154,7 +154,7 @@ function Header() {
         <p className="md:text-xl">Logo</p>
         <p className="hidden md:block">+7 (000) 000-00-00</p>
         <button
-          className="bg-[#2e2e2e] md:hidden flex flex-col space-y-2 focus:outline-none"
+          className="bg-[#2e2e2e] md:hidden justify-center flex flex-col space-y-2 focus:outline-none  hover:opacity-80"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Меню"
         >
@@ -168,7 +168,7 @@ function Header() {
           >
             <button
               type="button"
-              class="self-end rounded-md  focus:outline-none focus:ring-2 focus:ring-inset py-3"
+              className="hover:opacity-80 self-end rounded-md  focus:outline-none focus:ring-2 focus:ring-inset py-3"
               onClick={() => handleClickClose()}
               aria-label="Меню"
             >
@@ -195,19 +195,31 @@ function Header() {
                 {t("Solutions")}
               </h3>
               <ul className="mt-5 flex flex-col gap-y-7 text-base">
-                <li>{t("Development")}</li>
-                <li>{t("Advertising")}</li>
-                <li>{t("Design")}</li>
-                <li>{t("Telephony")}</li>
-                <li>{t("CRM Systems")}</li>
-                <li>{t("Analytics")}</li>
+                <li>
+                  <a>{t("Development")}</a>
+                </li>
+                <li>
+                  <a>{t("Advertising")}</a>
+                </li>
+                <li>
+                  <a>{t("Design")}</a>
+                </li>
+                <li>
+                  <a>{t("Telephony")}</a>
+                </li>
+                <li>
+                  <a>{t("CRM Systems")}</a>
+                </li>
+                <li>
+                  <a>{t("Analytics")}</a>
+                </li>
               </ul>
               <p className="mt-[152px] mb-5">+7 (000) 000-00-00</p>
             </section>
             <div className="border h-[0.5px] border-opacity-60 border-white top-[54.75px] mx-[-20px]"></div>
             <section>
               <div className="flex-row flex my-5 gap-[10px]">
-                <button className="bg-[#1C1C1C] w-[26px] h-[26px] flex items-center justify-center rounded rounded-s">
+                <button className="social-button bg-[#1C1C1C] w-[26px] h-[26px] flex items-center justify-center rounded rounded-s">
                   <svg
                     width="14"
                     height="15"
@@ -233,7 +245,7 @@ function Header() {
                     />
                   </svg>
                 </button>
-                <button className="bg-[#1C1C1C] bg-gradient-to-br w-[26px] flex items-center justify-center rounded rounded-s text-yellow-300">
+                <button className="bg-[#1C1C1C] social-button bg-gradient-to-br w-[26px] flex items-center justify-center rounded rounded-s text-yellow-300">
                   <svg
                     width="20"
                     height="10"
@@ -247,7 +259,7 @@ function Header() {
                     />
                   </svg>
                 </button>
-                <button className="bg-[#1C1C1C] bg-gradient-to-br w-[26px] flex items-center justify-center rounded rounded-s text-yellow-300">
+                <button className="bg-[#1C1C1C] social-button bg-gradient-to-br w-[26px] flex items-center justify-center rounded rounded-s text-yellow-300">
                   <svg
                     width="17"
                     height="12"
@@ -261,7 +273,7 @@ function Header() {
                     />
                   </svg>
                 </button>
-                <button className="bg-[#1C1C1C] bg-gradient-to-br w-[26px] flex items-center justify-center rounded rounded-s text-yellow-300">
+                <button className="bg-[#1C1C1C] social-button bg-gradient-to-br w-[26px] flex items-center justify-center rounded rounded-s text-yellow-300">
                   <svg
                     width="18"
                     height="14"
@@ -285,12 +297,24 @@ function Header() {
       <div className="hidden md:block bg-[#2c2c2c] w-full ">
         <nav className="md:max-w-[1170px] m-auto md:px-4">
           <ul className="pt-[14px] flex gap-x-12 justify-left">
-            <li>{t("Development")}</li>
-            <li>{t("Advertising")}</li>
-            <li>{t("social-networks")}</li>
-            <li>{t("Design")}</li>
-            <li>{t("Telephony")}</li>
-            <li>{t("CRM Systems")}</li>
+            <li>
+              <a>{t("Advertising")}</a>
+            </li>
+            <li>
+              <a>{t("Development")}</a>
+            </li>
+            <li>
+              <a>{t("social-networks")}</a>
+            </li>
+            <li>
+              <a>{t("Design")}</a>
+            </li>
+            <li>
+              <a>{t("Telephony")}</a>
+            </li>
+            <li>
+              <a>{t("CRM Systems")}</a>
+            </li>
           </ul>
         </nav>
       </div>

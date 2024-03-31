@@ -23,26 +23,26 @@ function Footer() {
         <button
           onClick={handleScrollToTop}
           type="button"
-          className="bg-white  mt-4 h-[26px] flex items-center w-[128px] justify-center rounded rounded-s"
+          className="bg-white  social-button mt-4 h-[26px] flex items-center w-[128px] justify-center rounded rounded-s"
         >
           <img src={telegram} alt="Описание изображения" className="" />
         </button>
 
         <div className="flex-row flex mt-[14px] gap-[10px]">
-          <button className="bg-white h-[26px] w-[26px] flex items-center justify-center rounded rounded-s">
+          <button className="bg-white social-button h-[26px] w-[26px] flex items-center justify-center rounded rounded-s">
             <img src={instagram} alt="Описание изображения" />
           </button>
 
-          <button className="bg-white h-[26px] flex w-[26px] items-center justify-center rounded rounded-s">
+          <button className="bg-white social-button h-[26px] flex w-[26px] items-center justify-center rounded rounded-s">
             <img src={vkontakte} alt="Описание изображения" />
           </button>
-          <div className="bg-white h-[26px] flex items-center w-[26px] justify-center rounded rounded-s">
+          <button className="bg-white social-button  h-[26px] flex items-center w-[26px] justify-center rounded rounded-s">
             <img src={youtube} alt="Описание изображения" />
-          </div>
+          </button>
         </div>
         <button
           onClick={handleScrollToTop}
-          className="hidden md:block absolute top-[56px] right-[149px]"
+          className="hidden md:block  absolute top-[56px] right-[149px] scroll-button"
         >
           <svg
             width="60"
@@ -50,8 +50,15 @@ function Footer() {
             viewBox="0 0 60 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="svg-icon"
           >
-            <rect width="60" height="60" rx="4" fill="#7D6137" />
+            <rect
+              id="background-rect"
+              width="60"
+              height="60"
+              rx="4"
+              fill="#7D6137"
+            />
             <rect
               x="13.8385"
               y="40.2246"

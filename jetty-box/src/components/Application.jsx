@@ -40,7 +40,7 @@ function Application() {
         <div className="flex items-start gap-5">
           <input
             type="checkbox"
-            className="mt-[3px] appearance-none min-w-4 h-4 border-[3px] border-[2C2C2B] rounded-sm "
+            className="checked:bg-[#987642]  checkbox-input mt-[3px] appearance-none min-w-4 h-4 border-[3px] border-[2C2C2B] rounded-sm "
           ></input>
           <p className="mt-0 text-xs text-left">
             {t("i-confirm")}{" "}

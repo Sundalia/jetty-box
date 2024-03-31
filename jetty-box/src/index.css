@@ -29,13 +29,9 @@
   max-width: 1170px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
 a:hover {
-  color: #535bf2;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 body {
@@ -52,24 +48,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
 
-.border-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none; /* чтобы не мешать кликам */
-  z-index: -1; /* чтобы разместиться под текстом кнопки */
-  border: 2px solid transparent;
-  background: linear-gradient(
-    to top right,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 1) 50%
-  );
+button:hover {
+  cursor: pointer;
 }
 
 .bg-box {
@@ -128,6 +109,53 @@ button:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.main-button:hover {
+  background: linear-gradient(#987642, #987642, #987642) padding-box,
+    linear-gradient(
+        175deg,
+        rgba(255, 255, 255, 0.43),
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      )
+      border-box;
+  background-color: #987642;
+}
+
+.main-button:active {
+  background: linear-gradient(#614c2b, #614c2b, #614c2b) padding-box,
+    linear-gradient(
+        175deg,
+        rgba(255, 255, 255, 0.43),
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      )
+      border-box;
+  background-color: #614c2b;
+  box-shadow: 0 0 0 0;
+}
+
+.lang-button:hover {
+  cursor: pointer;
+}
+.checkbox-input:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.social-button:hover {
+  opacity: 0.8;
+}
+.svg-icon {
+  transition: fill 0.3s ease;
+}
+
+.scroll-button:hover .svg-icon #background-rect {
+  fill: #987642;
+}
+
+.scroll-button:active .svg-icon #background-rect {
+  fill: #614c2b;
 }
 
 .button-shadow {
