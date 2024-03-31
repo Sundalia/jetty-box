@@ -1,6 +1,7 @@
 import React, { useState, Fragment, useEffect, useRef } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { useTranslation } from "react-i18next";
+import logo from "../assets/logo.svg";
 
 const languages = ["ru", "en"];
 
@@ -151,7 +152,7 @@ function Header() {
           </div>
         </Listbox>
         <div className="fixed top-16 w-72"></div>
-        <p className="md:text-xl">Logo</p>
+        <img src={logo} />
         <p className="hidden md:block">+7 (000) 000-00-00</p>
         <button
           className="bg-[#2e2e2e] md:hidden justify-center flex flex-col space-y-2 focus:outline-none  hover:opacity-80"

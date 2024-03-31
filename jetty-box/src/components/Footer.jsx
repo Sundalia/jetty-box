@@ -3,6 +3,7 @@ import telegram from "../assets/tg-icon.svg";
 import vkontakte from "../assets/vk-icon.svg";
 import instagram from "../assets/instagram-icon.svg";
 import youtube from "../assets/youtube-icon.svg";
+import logo from "../assets/logo.svg";
 
 function Footer() {
   const { t } = useTranslation();
@@ -14,9 +15,11 @@ function Footer() {
     <div className="md:inset-x-0 md:absolute w-full px-4 pb-[127px] bg-[#262525] relative z-10">
       <div className="md:max-w-[1170px] md:m-auto md:relative px-4">
         <div className="md:max-w-[1170px] md:m-auto h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
-        <h3 className="mt-4 md:mt-[30px] font-['Plateia'] md:font-['Proxima-Nova'] md:text-[46px] text-left uppercase text-xl">
+        {/* <h3 className="mt-4 md:mt-[30px] font-['Plateia'] md:font-['Proxima-Nova'] md:text-[46px] text-left uppercase text-xl">
           Logo
-        </h3>
+        </h3> */}
+        <img src={logo} className="mt-4 md:mt-[30px]" />
+
         <p className="font-['Proxima-Nova'] font-light md:font-bold text-base mt-6 md:mt-[30px] text-left">
           {t("dedugin")}
         </p>
