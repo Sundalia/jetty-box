@@ -152,7 +152,7 @@ function Header() {
           </div>
         </Listbox>
         <div className="fixed top-16 w-72"></div>
-        <img src={logo} />
+        <img src={logo}/>
         <p className="hidden md:block">+7 (000) 000-00-00</p>
         <button
           className="bg-[#2e2e2e] md:hidden justify-center flex flex-col space-y-2 focus:outline-none  hover:opacity-80"
