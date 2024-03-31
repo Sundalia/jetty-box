@@ -121,7 +121,7 @@ function Header() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className=" absolute mt-1 max-h-60 overflow-auto rounded bg-[#454545] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="z-10 absolute mt-1 max-h-60 overflow-auto rounded bg-[#454545] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
                 {languages.map((language, languageIdx) => (
                   <div key={languageIdx} className="relative">
                     <Listbox.Option
@@ -152,7 +152,7 @@ function Header() {
           </div>
         </Listbox>
         <div className="fixed top-16 w-72"></div>
-        <img src={logo}/>
+        <img src={logo} />
         <p className="hidden md:block">+7 (000) 000-00-00</p>
         <button
           className="bg-[#2e2e2e] md:hidden justify-center flex flex-col space-y-2 focus:outline-none  hover:opacity-80"
@@ -165,7 +165,7 @@ function Header() {
         {isOpen && (
           <div
             ref={menuRef}
-            className="w-[309px] flex flex-col backdrop-filter backdrop-blur-lg bg-gray-800 bg-opacity-50 absolute top-0 right-0 px-5 bg-transparent rounded-lg"
+            className="z-10 w-[309px] flex flex-col backdrop-filter backdrop-blur-lg bg-gray-800 bg-opacity-50 absolute top-0 right-0 px-5 bg-transparent rounded-lg"
           >
             <button
               type="button"
