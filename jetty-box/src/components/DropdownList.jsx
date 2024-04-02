@@ -30,11 +30,7 @@ export default function DropdownList() {
             }
             key={item.question}
           >
-            <button
-              className={styles.questionsHeader}
-              onClick={() => toggle(i)}
-              type="button"
-            >
+            <div className={styles.questionsHeader} onClick={() => toggle(i)}>
               <div className="flex gap-4 items-center">
                 <span className="text-[#838383]">
                   {String(i + 1).padStart(2, "0")}
@@ -51,7 +47,7 @@ export default function DropdownList() {
                     : styles.questionsArrow
                 }
               />
-            </button>
+            </div>
             <div
               className={
                 selected === i
