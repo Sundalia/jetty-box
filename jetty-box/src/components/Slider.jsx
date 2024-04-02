@@ -31,19 +31,18 @@ export default function () {
             scrollbar-clickable="true"
             mousewheel-invert="true"
             loop="true"
-            initialSlide="0"
-            centeredSlides="true"
             className="overflow-visible cursor-pointer"
           >
             {ServiceData().map((item) => (
               <swiper-slide
                 key={item.id}
                 style={{
+                  marginLeft: "auto",
                   marginRight: "20px",
                   width: "fit-content",
                 }}
               >
-                <div className="mr-6 selector-shadow flex flex-col group relative rounded  text-white px-5 py-4 h-[268px] w-[187px] overflow-hidden">
+                <div className="mr-6 selector-shadow flex flex-col group relative rounded  text-white px-5 py-4 h-[268px] w-[190px] overflow-hidden">
                   <div
                     className="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-tl before:from-[#202020] before:to-transparent before:z-[-5] z-10 bg-gradient-to-tl from-white to-black absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url(${item.backgroundImage})` }}
