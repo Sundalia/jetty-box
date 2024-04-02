@@ -16,8 +16,8 @@ export default function DropdownList() {
   };
 
   return (
-    <div className="px-4 pb-[89px] ">
-      <h3 className="md:leading-[131%] md:text-[32px] mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] md:max-w-full leading-normal">
+    <div className="px-4 md:pb-[160px] pb-[87px]">
+      <h3 className="md:leading-9 md:text-[32px] mb-9 font-['Plateia'] text-left uppercase md:normal-case text-2xl max-w-[300px] md:max-w-full leading-normal">
         {t("we-help")}
       </h3>{" "}
       <ul className={styles.questionsContainer}>
@@ -95,7 +95,7 @@ export default function DropdownList() {
                         styles.questionsAnswerActive
                       )
                     : styles.questionsAnswer,
-                  "my-5")
+                  "mt-5")
                 }
               >
                 {item.answer}

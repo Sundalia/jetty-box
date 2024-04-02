@@ -3,12 +3,12 @@ import planet from "../assets/application-planet.svg";
 function Application() {
   const { t } = useTranslation();
   return (
-    <div className="md:flex mt-10 px-4 pb-[79px] relative overflow-hidden md:gap-x-[110px]">
+    <div className="md:flex md:mt-10 px-4 pb-[176px] relative overflow-hidden md:gap-x-[110px]">
       <div className="max-w-[670px]">
         <h3 className="min-w-[300px] max-w-[670px] md:leading-[131%] md:text-[32px] mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase md:normal-case text-2xl leading-normal">
           {t("where-to-start")}
         </h3>
-        <p className="text-left max-w-[345px] md:max-w-[480px]">
+        <p className="leading-5 text-left max-w-[345px] md:max-w-[480px]">
           {t("we-audit")}
         </p>
       </div>

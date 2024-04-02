@@ -13,7 +13,7 @@ function Footer() {
   };
   return (
     <div className="md:inset-x-0 md:absolute w-full px-4 pb-[127px] bg-[#262525] relative z-10">
-      <div className="md:max-w-[1170px] md:m-auto md:relative px-4">
+      <div className="md:max-w-[1170px] md:m-auto md:relative md:px-4">
         <div className="md:max-w-[1170px] md:m-auto h-px w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
         {/* <h3 className="mt-4 md:mt-[30px] font-['Plateia'] md:font-['Proxima-Nova'] md:text-[46px] text-left uppercase text-xl">
           Logo
@@ -45,7 +45,7 @@ function Footer() {
         </div>
         <button
           onClick={handleScrollToTop}
-          className="hidden md:block  absolute top-[56px] right-[149px] scroll-button"
+          className="hidden md:block  absolute top-[56px] right-[22px] scroll-button"
         >
           <svg
             width="60"

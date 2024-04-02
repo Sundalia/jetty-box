@@ -13,8 +13,8 @@ import testing from "../assets/slide-testing.svg";
 export default function () {
   const { t } = useTranslation();
   return (
-    <div className="pt-16 px-4 pb-[89px] mb:pb-3 overflow-hidden ">
-      <h3 className="md:leading-[131%] md:text-[42px] mt-4 mb-9 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] leading-normal">
+    <div className="pt-9 px-4 pb-[89px] mb:pb-3 overflow-hidden ">
+      <h3 className="md:leading-[131%] md:text-[32px] mt-4 md:mt-8 mb-9 font-['Plateia'] text-left uppercase md:capitalize text-2xl max-w-[300px] leading-normal">
         {t("if")}
       </h3>
       <img
@@ -24,7 +24,11 @@ export default function () {
       <div className="md:hidden overflow-visible">
         <div
           className="slider-container"
-          style={{ overflowX: "auto", marginRight: "-20px", marginLeft: "-165px" }}
+          style={{
+            overflowX: "auto",
+            marginRight: "-20px",
+            marginLeft: "-165px",
+          }}
         >
           <swiper-container
             slides-per-view="auto"
@@ -42,7 +46,7 @@ export default function () {
                   width: "fit-content",
                 }}
               >
-                <div className="mr-6 selector-shadow flex flex-col group relative rounded  text-white px-5 py-4 h-[268px] w-[187px] overflow-hidden">
+                <div className="leading-5 mr-6 selector-shadow flex flex-col group relative rounded  text-white px-3 py-3 h-[268px] w-[187px] overflow-hidden">
                   <div
                     className="before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-tl before:from-[#202020] before:to-transparent before:z-[-5] z-10 bg-gradient-to-tl from-white to-black absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url(${item.backgroundImage})` }}

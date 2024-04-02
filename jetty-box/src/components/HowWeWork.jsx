@@ -19,26 +19,26 @@ function HowWeWork() {
           <img
             src={plan}
             alt="Описание изображения"
-            className="mr-9 h-[515px]"
+            className="mr-9 h-[515px] z-10"
           />
           <div className="">
             <p className="text-left">
               <strong>{t("conduct")}</strong>
               <br /> {t("interview")}
             </p>
-            <p className="text-left mt-10">
+            <p className="text-left mt-14">
               <strong>{t("plan")} </strong>
               <br /> {t("interaction")}
             </p>
-            <p className="text-left mt-10">
+            <p className="text-left mt-14 max-w-[206px]">
               <strong>{t("team")} </strong>
               <br /> {t("responsible-person")}
             </p>
-            <p className="text-left mt-16 z-10 relative">
+            <p className="text-left mt-8 z-10 relative max-w-[232px]">
               <strong>{t("create-system")} </strong>
               <br /> {t("visualized-system")}
             </p>
-            <p className="text-left mt-14 z-10 relative">
+            <p className="text-left mt-5 z-10 relative">
               <strong>{t("implement")} </strong>
               <br /> {t("to-work")}
             </p>
