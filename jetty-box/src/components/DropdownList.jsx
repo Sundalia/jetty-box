@@ -65,6 +65,7 @@ export default function DropdownList() {
               {selected === i && (
                 <div className="h-16 sm:h-[119px] md:h-[154px]">
                   <img
+                    loading="lazy"
                     src={item.backgroundImage}
                     alt="описание изображения"
                     className={styles.backgroundImage}
