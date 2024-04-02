@@ -62,7 +62,7 @@ export default function DropdownList() {
                   : styles.questionsAnswer
               }
             >
-              {selected === i && (
+              {/* {selected === i && (
                 <div className="h-16 sm:h-[119px] md:h-[154px]">
                   <img
                     loading="lazy"
@@ -71,27 +71,63 @@ export default function DropdownList() {
                     className={styles.backgroundImage}
                   ></img>
                 </div>
-              )}
+              )} */}
 
+              <div
+                className={
+                  (selected === i
+                    ? classNames(
+                        styles.questionsAnswer,
+                        styles.questionsAnswerActive
+                      )
+                    : styles.questionsAnswer,
+                  "h-16 sm:h-[119px] md:h-[154px]")
+                }
+              >
+                <img
+                  loading="lazy"
+                  src={item.backgroundImage}
+                  alt="описание изображения"
+                  className={styles.backgroundImage}
+                ></img>{" "}
+              </div>
               <p
                 className={
-                  selected === i
+                  (selected === i
                     ? classNames(
-                        styles.questionsAnswerText,
-                        styles.questionsAnswerTextActive
+                        styles.questionsAnswer,
+                        styles.questionsAnswerActive
                       )
-                    : styles.questionsAnswer
+                    : styles.questionsAnswer,
+                  "my-5")
                 }
               >
                 {item.answer}
               </p>
-              {selected === i && (
+
+              <button
+                className={
+                  (selected === i
+                    ? classNames(
+                        styles.questionsAnswer,
+                        styles.questionsAnswerActive
+                      )
+                    : styles.questionsAnswer,
+                  "mt-5 mb-5 w-full")
+                }
+              >
+                <div className="flex items-center justify-center main-button">
+                  <span>{t("send-request")}</span>
+                </div>
+              </button>
+
+              {/* {selected === i && (
                 <button type="submit" className="mt-5 mb-5 w-full">
                   <div className="flex items-center justify-center main-button">
                     <span>{t("send-request")}</span>
                   </div>
                 </button>
-              )}
+              )} */}
             </div>
           </li>
         ))}
