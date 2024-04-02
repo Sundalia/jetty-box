@@ -46,6 +46,10 @@
   background: #7d6137;
 }
 
+.questionsItem:active {
+  background: #7d6137;
+}
+
 .questionsItemActive:hover {
   background: linear-gradient(#1e1e1e, #1e1e1e) padding-box,
     linear-gradient(170deg, rgb(82, 82, 82), rgba(82, 82, 82, 0)) border-box;
