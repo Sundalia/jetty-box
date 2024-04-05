@@ -34,6 +34,7 @@ function Header() {
 
   const LanguageLine = () => (
     <svg
+      className="w-full h-0.5"
       width="52.000000"
       height="1.000000"
       viewBox="0 0 52 1"
@@ -77,13 +78,13 @@ function Header() {
           className="uppercase"
         >
           <div className="relative w-16 h-9">
-            <Listbox.Button className="flex cursor-pointer hover:bg-gray-400 hover:opacity-80 rounded py-1.5 pl-2 text-left  selector-shadow focus:outline-none">
-              <div className="back rounded h-full flex bg-[#2e2e2e] items-center justify-center">
-                <span className="block truncate text-white uppercase">
+            <Listbox.Button className="w-full flex cursor-pointer hover:bg-gray-400 hover:opacity-80 rounded py-1.5 pl-2 text-left  selector-shadow focus:outline-none">
+              <div className="back rounded h-full flex bg-[#2e2e2e] items-center justify-center gap-1.5">
+                <span className="block truncate text-white uppercase -mt-0.5">
                   {i18n.resolvedLanguage}
                 </span>
-                <span className="pointer-events-none inset-y-0 right-0 flex items-center pr-2">
-                  <div className="ml-1">
+                <span className="pointer-events-none inset-y-0 right-0 flex items-center overflow-hidden">
+                  <div className="ml-0.5">
                     <svg
                       width="15.789879"
                       height="8.581177"
@@ -121,12 +122,12 @@ function Header() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="z-10 absolute mt-1 max-h-60 overflow-auto rounded bg-[#454545] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="w-full z-10 absolute mt-[10px] max-h-60 overflow-auto rounded bg-[#454545] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
                 {languages.map((language, languageIdx) => (
                   <div key={languageIdx} className="relative">
                     <Listbox.Option
                       className={({ active }) =>
-                        `lang-button select-none py-2 ${
+                        `lang-button select-none py-[1.5px] ${
                           active ? "bg-opacity-100" : "bg-transparent"
                         }`
                       }
