@@ -20,6 +20,19 @@ function Hero() {
     // Enable scrolling on the body when the dialog is closed
     document.body.style.overflow = "auto";
   }
+
+  let [isSuccessOpen, setIsSuccessOpen] = useState(false);
+  function openSuccessModal() {
+    setIsSuccessOpen(true);
+    // Disable scrolling on the body when the dialog is open
+    document.body.style.overflow = "hidden";
+  }
+  function closeSuccessModal() {
+    setIsSuccessOpen(false);
+    // Enable scrolling on the body when the dialog is closed
+    document.body.style.overflow = "auto";
+  }
+
   return (
     <div className="relative md:justify-items-start grid-rows-auto mt-10 md:mt-40 px-4 md:px-4 pb-[75px] md:grid md:grid-cols-2">
       <h1 className="md:row-start-1 md:row-end-2 md:col-span-1 md:col-start-1 font-['Plateia'] text-left md:leading-[131%] md:text-[42px] uppercase leading-[123%] text-[26px]">
@@ -77,17 +90,17 @@ function Hero() {
         <Dialog
           open={isOpen}
           onClose={() => setIsOpen(false)}
-          className="fixed inset-0 z-50 flex items-center justify-center"
+          className="fixed inset-0 z-20 flex items-center justify-center"
         >
           <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
-          <Dialog.Panel className="flex flex-col px-5 pb-5 pt-2.5 max-w-sm rounded-lg bg-[#2c2c2c] z-50">
+          <Dialog.Panel className="flex flex-col px-5 pb-5 pt-2.5 max-w-sm rounded-lg bg-[#2c2c2c] z-20">
             <button onClick={closeModal} className="w-9 h-9 -mr-3 p-0 self-end">
               <img src={close} loading="lazy" />
             </button>
-            <Dialog.Title className="text-white">
+            <Dialog.Title>
               Оставьте заявку, что бы мы могли вам перезвоинть
             </Dialog.Title>
-            <form className="flex flex-col mt-6 md:max-w-[370px]">
+            <form className="flex flex-col mt-6 max-w-sm md:max-w-[370px]">
               <div className="flex flex-col gap-[10px]">
                 <input
                   placeholder={t("name")}
@@ -102,7 +115,11 @@ function Hero() {
                   className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
                 ></input>
               </div>
-              <button type="submit" className="mt-5 mb-5 w-full">
+              <button
+                type="button"
+                onClick={openSuccessModal}
+                className="mt-5 mb-5 w-full"
+              >
                 <div className="main-button flex items-center justify-center">
                   <span>{t("send")}</span>
                 </div>
@@ -122,6 +139,62 @@ function Hero() {
               </div>
             </form>
           </Dialog.Panel>
+        </Dialog>
+      </Transition>
+
+      <Transition appear show={isSuccessOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-50" onClose={closeSuccessModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-sm md:max-w-[370px] transform overflow-hidden rounded-lg bg-[#2c2c2c] p-8 text-left align-middle shadow-xl transition-all">
+                  <div>
+                    <p>Спасибо за заявку, наш менеджер свяжется с вами </p>
+                  </div>
+
+                  <div>
+                    {/* <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={closeSuccessModal}
+                    >
+                      Понятно
+                    </button> */}
+
+                    <button
+                      type="button"
+                      onClick={closeSuccessModal}
+                      className="mt-6 w-full"
+                    >
+                      <div className="main-button flex items-center justify-center">
+                        <span>{t("Ok")}</span>
+                      </div>
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
         </Dialog>
       </Transition>
     </div>

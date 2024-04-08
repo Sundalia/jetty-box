@@ -12,7 +12,6 @@
   "CRM Systems": "CRM Systems",
   "Analytics": "Analytics",
   "social-networks": "Social Networks",
-  
 
   "where-to-start": "You have a huge number of tasks and don't know where to start?",
   "we-audit": "We will do an audit of the project and you will get recommendations, optimal team composition to achieve the set business task",
@@ -70,5 +69,6 @@
   "visualized-system": "A system where actions for each direction will be visible",
   "implement": "We will put",
   "to-work": "into action",
-  "dedugin": "Anton Dedugin"
+  "dedugin": "Anton Dedugin",
+  "ok": "Ok"
 }
