@@ -1,4 +1,5 @@
 import { useState, Fragment } from "react";
+import axios from "axios";
 import mainbox from "../assets/main-box.svg";
 import mainboxShadow from "../assets/main-box-shadow.svg";
 import magic from "../assets/hero-magic.svg";
@@ -8,6 +9,49 @@ import { ReactTyped } from "react-typed";
 import { Dialog, Transition } from "@headlessui/react";
 
 function Hero() {
+  const [recipient_email, setEmail] = useState(
+    localStorage.getItem("recipient_email")
+  );
+  const [subject, setSubject] = useState(localStorage.getItem("subject"));
+  const [message, setMessages] = useState(localStorage.getItem("message"));
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+    // Your form submission logic here
+    sendMail();
+    resetForm();
+
+    openSuccessModal();
+    // Assuming this function opens a success modal
+  };
+
+  function resetForm() {
+    setEmail("");
+    setSubject("");
+    setMessages("");
+  }
+
+  function sendMail() {
+    console.log("Sending Email");
+
+    if (recipient_email && subject && message) {
+      localStorage.setItem("recipient_email", recipient_email);
+      localStorage.setItem("subject", subject);
+      localStorage.setItem("message", message);
+
+      axios
+        .post("http://localhost:3000/api/feedback", {
+          name: recipient_email,
+          phone: subject,
+          message: message,
+        })
+        .then(() => console.log("Message Send Succesfuly"))
+        .catch((err) => console.log(err, "Oppssy daisssy"));
+      return;
+    }
+    return console.log("Fill in all the fields to continue");
+  }
+
   const { t } = useTranslation();
   let [isOpen, setIsOpen] = useState(false);
   function openModal() {
@@ -100,23 +144,39 @@ function Hero() {
             <Dialog.Title>
               Оставьте заявку, что бы мы могли вам перезвоинть
             </Dialog.Title>
-            <form className="flex flex-col mt-6 max-w-sm md:max-w-[370px]">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col mt-6 max-w-sm md:max-w-[370px]"
+            >
               <div className="flex flex-col gap-[10px]">
                 <input
                   placeholder={t("name")}
+                  type="text"
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessages(e.target.value)}
                   className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
                 ></input>
                 <input
                   placeholder={t("tel")}
+                  type="text"
+                  id="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
                 ></input>
                 <input
                   placeholder="E-mail"
+                  type="text"
+                  id="email"
+                  value={recipient_email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
                 ></input>
               </div>
               <button
-                type="button"
+                type="submit"
                 onClick={openSuccessModal}
                 className="mt-5 mb-5 w-full"
               >
