@@ -32,7 +32,7 @@ export default function () {
         >
           <swiper-container
             slides-per-view="auto"
-            scrollbar-clickable="true"
+            // scrollbar-clickable="true"
             mousewheel-invert="true"
             loop="true"
             className="overflow-visible cursor-pointer"
