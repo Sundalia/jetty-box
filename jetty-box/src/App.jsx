@@ -22,8 +22,10 @@ export default function App() {
         <DropdownList />
       </div>
       <OurAreas />
-      <HowWeWork />
-      <Application />
+      <div className="overflow-hidden">
+        <HowWeWork />
+        <Application />
+      </div>
       <Footer />
     </>
   );

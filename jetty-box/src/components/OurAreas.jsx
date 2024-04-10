@@ -11,7 +11,7 @@ import planet from "../assets/grid-planet.svg";
 function OurAreas() {
   const { t } = useTranslation();
   return (
-    <div className=" px-4 pb-[56px]">
+    <div className=" px-4 pb-[56px] overflow-hidden">
       <div className="relative">
         <img
           src={planet}
