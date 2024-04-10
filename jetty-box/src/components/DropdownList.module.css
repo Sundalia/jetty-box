@@ -146,3 +146,10 @@
     font-weight: 400;
   }
 }
+
+@media (width<500px) {
+  .questionsItem:hover {
+    background-color: #1e1e1e;
+    opacity: 0.8;
+  }
+}
