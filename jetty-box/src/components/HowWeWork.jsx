@@ -8,7 +8,7 @@ function HowWeWork() {
   return (
     <div className="mt-10 px-4 pb-[56px]">
       <div className="relative">
-        <h3 className="md:leading-[131%] md:text-[32px] mb-9 md:mb-24 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] md:max-w-full leading-normal">
+        <h3 className="md:leading-[131%] md:text-[32px] mb-9 md:mb-36 font-['Plateia'] text-left uppercase text-2xl max-w-[300px] md:max-w-full leading-normal">
           {t("how-work")}
         </h3>
         <img
@@ -18,6 +18,7 @@ function HowWeWork() {
         <div className="md:hidden ml-3 flex mt-8">
           <img
             src={plan}
+            loading="lazy"
             alt="Описание изображения"
             className="mr-9 h-[515px] z-10"
           />
@@ -48,11 +49,12 @@ function HowWeWork() {
         <div className="hidden md:flex ml-3 mt-8 relative justify-center">
           <img
             src={desktopPlan}
+            loading="lazy"
             alt="Описание изображения"
             className="h-[515px] -mt-[123PX] max-w-[1040px] w-full"
           />
           <div className="grid grid-cols-5 grid-rows-2 absolute text-[21px] leading-6 tracking-[0%]">
-            <p className="text-left row-start-1 col-start-1 max-w-[216px] h-[140px] translate-y-[34%]">
+            <p className="text-left row-start-1 col-start-1 max-w-[216px] h-[140px] translate-y-[3%]">
               <strong>{t("conduct")}</strong>{" "}
               <span className="lowercase">{t("interview")}</span>
             </p>
@@ -60,7 +62,7 @@ function HowWeWork() {
               <strong>{t("plan")} </strong>
               <br /> <span className="lowercase">{t("interaction")}</span>
             </p>
-            <p className="absolute top-[-50px] text-center row-start-1 col-start-3 w-[298px] h-[140px] translate-y-[34%] translate-x-[-25%]">
+            <p className="absolute top-[-50px] text-center row-start-1 col-start-3 w-[298px] h-[140px] translate-y-[3%] translate-x-[-25%]">
               <strong>{t("team")} </strong>
               <br /> {t("responsible-person")}
             </p>
@@ -68,7 +70,7 @@ function HowWeWork() {
               <strong>{t("create-system")} </strong>
               <br /> {t("visualized-system")}
             </p>
-            <p className="text-right row-start-1 col-start-5 max-w-[216px] h-[140px] translate-y-[34%]">
+            <p className="text-right row-start-1 col-start-5 max-w-[216px] h-[140px] translate-y-[3%]">
               <strong>{t("implement")} </strong>
               {t("to-work")}
             </p>
