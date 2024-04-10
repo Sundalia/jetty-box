@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import planet from "../assets/application-planet.svg";
+// import planet from "../assets/application-planet.svg";
 function Application() {
   const { t } = useTranslation();
   return (
-    <div className="md:flex md:mt-10 px-4 pb-[176px] relative overflow-hidden md:gap-x-[110px]">
+    <div className="md:flex md:mt-10 px-4 pb-[79px] relative md:overflow-hidden md:gap-x-[110px]">
       <div className="max-w-[670px]">
         <h3 className="min-w-[300px] max-w-[670px] md:leading-[131%] md:text-[32px] mt-4 mb-5 z-10 relative font-['Plateia'] text-left uppercase md:normal-case text-2xl leading-normal">
           {t("where-to-start")}
@@ -12,11 +12,11 @@ function Application() {
           {t("we-audit")}
         </p>
       </div>
-      <img
+      {/* <img
         src={planet}
         style={{ overflowBlock: "hidden" }}
         className="md:hidden absolute translate-y-[55%] translate-x-[30%]"
-      />
+      /> */}
       <form className="flex flex-col mt-6 md:w-[370px]">
         <div className="flex flex-col gap-[10px]">
           <input

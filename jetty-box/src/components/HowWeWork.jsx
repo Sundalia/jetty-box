@@ -13,7 +13,7 @@ function HowWeWork() {
         </h3>
         <img
           src={planet}
-          className="md:hidden absolute overflow-[overlay] left-[-150px] top-[461px] overflow-[overlay]"
+          className="md:hidden absolute overflow-[overlay] -translate-x-[5%] top-[461px] "
         />
         <div className="md:hidden ml-3 flex mt-8">
           <img

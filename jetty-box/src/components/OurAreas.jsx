@@ -12,11 +12,11 @@ function OurAreas() {
   const { t } = useTranslation();
   return (
     <div className=" px-4 pb-[56px]">
-      <div className="relative overflow-hidden">
+      <div className="relative">
         <img
           src={planet}
           style={{ overflowBlock: "hidden" }}
-          className="md:hidden absolute translate-y-[120%] translate-x-[40%]"
+          className="md:hidden absolute translate-y-[24%] overflow-[overlay] translate-x-[54%]"
         />
         <h3 className="md:tracking-[0%] leading-9 md:max-w-screen-xl md:leading-[32px] md:text-[32px] font-['Plateia'] text-left uppercase md:normal-case text-2xl max-w-[300px]">
           {t("covering-a-wide")}

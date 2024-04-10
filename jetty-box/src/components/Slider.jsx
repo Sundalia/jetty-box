@@ -19,7 +19,7 @@ export default function () {
       </h3>
       <img
         src={planet}
-        className="md:hidden absolute right-0 top-[82px] overflow-[overlay]"
+        className="md:hidden absolute right-0 top-[254px] overflow-[overlay]"
       />
       <div className="md:hidden overflow-visible">
         <div
