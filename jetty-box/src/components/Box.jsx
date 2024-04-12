@@ -2,6 +2,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import magic from "../assets/box-magic.svg";
 import slider from "../assets/box-slider.svg";
+import { Canvas } from "@react-three/fiber";
+import { Experience } from "./Experience";
 
 export default function Box() {
   const { t } = useTranslation();
@@ -11,6 +13,14 @@ export default function Box() {
         {t("tasks-we-solve")}
       </h3>
       <img src={magic} className="hidden md:block col-start-1" />
+      <Canvas
+        className="md:hidden"
+        shadows
+        camera={{ position: [0, 0, 5], fov: 30 }}
+      >
+        {/* <color attach="background" args={["#ececec"]} /> */}
+        <Experience />
+      </Canvas>
       <img
         src={slider}
         className="hidden md:block col-start-2 row-start-1 row-end-4"

@@ -54,7 +54,8 @@ button:hover {
 }
 
 .bg-box {
-  background-image: url("./assets/bg-box.svg");
+  /* background-image: url("./assets/bg-box.svg"); */
+  background: linear-gradient(to bottom, #000000, #2c2c2c);
 }
 @media (min-width: 760px) {
   .bg-box {
