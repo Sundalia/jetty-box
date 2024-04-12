@@ -1,12 +1,10 @@
 import { OrbitControls } from "@react-three/drei";
 import { ModelBox } from "./ModelBox";
-import { Avatar } from "./Avatar";
 
 export const Experience = () => {
   return (
     <>
       {/* <OrbitControls /> */}
-      {/* <Avatar /> */}
       <ambientLight />
       <directionalLight
         position={[0, 5, 1]}
@@ -16,14 +14,14 @@ export const Experience = () => {
       />
       <ModelBox scale={[2, 2, 2]} position={[0, -0.7, 0]} />
 
-      {/* <mesh
+      <mesh
         rotation={[-0.5 * Math.PI, 0, 0]}
         position={[0, -1, 0]}
         receiveShadow
       >
-        <planeBufferGeometry args={[10, 10, 1, 1]} />
+        {/* <planeBufferGeometry args={[10, 10, 1, 1]} /> */}
         <shadowMaterial transparent opacity={0.6} />
-      </mesh> */}
+      </mesh>
       <ambientLight intensity={1} />
       <OrbitControls
         minPolarAngle={Math.PI / 2.5}
