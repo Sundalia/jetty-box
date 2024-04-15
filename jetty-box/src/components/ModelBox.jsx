@@ -16,7 +16,7 @@ export function ModelBox(props) {
     console.log("names:", names);
     // actions.ArmatureAction.play();
 
-    // actions[names[1]].reset().play();
+    actions[names[1]].reset().play();
   }, [actions]);
 
   return (
@@ -25,7 +25,7 @@ export function ModelBox(props) {
         <group name="Empty001" rotation={[Math.PI / 2, 0, 0]} />
         <group
           name="Armature"
-          position={[0, 0, 0]}
+          position={[0, 12, 0]}
           scale={[0.195, 0.239, 0.195]}
         >
           <skinnedMesh

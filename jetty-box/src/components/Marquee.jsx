@@ -6,7 +6,7 @@ function Marquee() {
   return (
     <div className="overflow-x-hidden mt-20 md:-mt-14 md:inset-x-0 md:absolute md:px-0">
       <div className="marquee-text  font-[plateia] font-normal text-base leading-17 md:text-[32px]">
-        <div class="marquee inline-flex items-center gap-x-6 overflow-hidden whitespace-nowrap py-4 font-bold leading-relaxed text-gray-50 justify-center">
+        <div className="marquee inline-flex items-center gap-x-6 overflow-hidden whitespace-nowrap py-4 font-bold leading-relaxed text-gray-50 justify-center">
           <p>{t("practical-eperience")}</p>
           <svg
             width="4.000000"

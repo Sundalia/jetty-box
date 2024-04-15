@@ -1,24 +1,32 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import magic from "../assets/box-magic.svg";
 import slider from "../assets/box-slider.svg";
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./Experience";
+import { CameraControls } from "@react-three/drei";
 
 export default function Box() {
   const { t } = useTranslation();
+  const cameraControlRef = useRef();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      cameraControlRef.current?.moveTo(0, 23.3, 0);
+      cameraControlRef.current?.zoom(3);
+    }, 1000); // Delay of 1000 milliseconds (1 second)
+
+    return () => clearTimeout(timer); // Cleanup function to clear the timeout
+  }, []); // Runs only on component mount
+
   return (
     <div className="md:grid md:grid-cols-2 relative bg-box pt-11 px-4 pb-[89px] bg-cover bg-center h-[666px]">
       <h3 className="col-start-1 md:leading-[131%] md:text-[42px] mb-9 md:mb-[74px] font-['Plateia'] text-left uppercase text-2xl max-w-[300px] md:max-w-[500px] leading-normal">
         {t("tasks-we-solve")}
       </h3>
       <img src={magic} className="hidden md:block col-start-1" />
-      <Canvas
-        className="md:hidden"
-        shadows
-        camera={{ position: [0, 0, 5], fov: 30 }}
-      >
-        {/* <color attach="background" args={["#ececec"]} /> */}
+      <Canvas key={Date.now()} className="md:hidden">
+        <CameraControls ref={cameraControlRef} />
         <Experience />
       </Canvas>
       <img
