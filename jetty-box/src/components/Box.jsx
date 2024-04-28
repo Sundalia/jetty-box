@@ -10,22 +10,15 @@ export default function Box() {
   const { t } = useTranslation();
   const cameraControlRef = useRef();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      cameraControlRef.current?.moveTo(0, 23.3, 0);
-      cameraControlRef.current?.zoom(3);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const disableUserActions = () => {
+  const initialCameraConfig = () => {
     cameraControlRef.current.mouseButtons.wheel = null;
     // cameraControlRef.current.mouseButtons.left = null;
     // cameraControlRef.current.mouseButtons.middle = null;
     cameraControlRef.current.touches.one = null;
     // cameraControlRef.current.touches.two = null;
     // cameraControlRef.current.touches.three = null;
+    cameraControlRef.current?.moveTo(0, 23.3, 0);
+    cameraControlRef.current?.zoom(3);
   };
 
   return (
@@ -37,7 +30,7 @@ export default function Box() {
       <Canvas
         key={Date.now()}
         className="md:hidden"
-        onCreated={disableUserActions}
+        onCreated={initialCameraConfig}
       >
         <CameraControls ref={cameraControlRef} />
         <Experience />
