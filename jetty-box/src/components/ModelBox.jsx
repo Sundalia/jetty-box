@@ -8,16 +8,30 @@ export function ModelBox(props) {
   const { camera } = useThree(); // Получаем доступ к камере
 
   const { nodes, materials, animations } = useGLTF("models/AnimaBox.glb");
-  const { actions, names } = useAnimations(animations, group);
+  const { actions, mixer, names } = useAnimations(animations, group);
 
   useEffect(() => {
-    // Запускаем анимацию
     console.log("actions:", actions);
-    console.log("names:", names);
-    // actions.ArmatureAction.play();
+    // actions[names[1]].reset().play();
 
-    actions[names[1]].reset().play();
-  }, [actions]);
+    const sourceClip = actions[names[1]].getClip();
+
+    const trimmedWalkAnimation = THREE.AnimationUtils.subclip(
+      sourceClip,
+      "trimmedWalk",
+      10,
+      80
+    );
+
+    const trimmedAction = mixer.clipAction(trimmedWalkAnimation);
+    trimmedAction.play();
+
+    trimmedAction.fadeIn = true;
+    trimmedAction.fadeInDuration = 0.5;
+
+    trimmedAction.fadeOut = true;
+    trimmedAction.fadeOutDuration = 0.5;
+  }, [actions, mixer, names]);
 
   return (
     <group ref={group} {...props} dispose={null}>
