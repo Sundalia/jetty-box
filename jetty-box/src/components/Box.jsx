@@ -12,7 +12,7 @@ export default function Box() {
 
   const initialCameraConfig = () => {
     cameraControlRef.current.mouseButtons.wheel = null;
-    // cameraControlRef.current.mouseButtons.left = null;
+    cameraControlRef.current.mouseButtons.left = null;
     // cameraControlRef.current.mouseButtons.middle = null;
     cameraControlRef.current.touches.one = null;
     // cameraControlRef.current.touches.two = null;
