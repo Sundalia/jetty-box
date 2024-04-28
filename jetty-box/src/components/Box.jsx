@@ -14,10 +14,19 @@ export default function Box() {
     const timer = setTimeout(() => {
       cameraControlRef.current?.moveTo(0, 23.3, 0);
       cameraControlRef.current?.zoom(3);
-    }, 1000); // Delay of 1000 milliseconds (1 second)
+    }, 1000);
 
-    return () => clearTimeout(timer); // Cleanup function to clear the timeout
-  }, []); // Runs only on component mount
+    return () => clearTimeout(timer);
+  }, []);
+
+  const disableUserActions = () => {
+    cameraControlRef.current.mouseButtons.wheel = null;
+    // cameraControlRef.current.mouseButtons.left = null;
+    // cameraControlRef.current.mouseButtons.middle = null;
+    cameraControlRef.current.touches.one = null;
+    // cameraControlRef.current.touches.two = null;
+    // cameraControlRef.current.touches.three = null;
+  };
 
   return (
     <div className="md:grid md:grid-cols-2 relative bg-box pt-11 px-4 pb-[89px] bg-cover bg-center h-[666px]">
@@ -25,7 +34,11 @@ export default function Box() {
         {t("tasks-we-solve")}
       </h3>
       <img src={magic} className="hidden md:block col-start-1" />
-      <Canvas key={Date.now()} className="md:hidden">
+      <Canvas
+        key={Date.now()}
+        className="md:hidden"
+        onCreated={disableUserActions}
+      >
         <CameraControls ref={cameraControlRef} />
         <Experience />
       </Canvas>
