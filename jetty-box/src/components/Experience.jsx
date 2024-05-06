@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { ModelBox } from "./ModelBox";
 import { TestModelBox } from "./TestModelBox";
+import Light from './Light'
 
 export const Experience = () => {
 
@@ -16,7 +17,8 @@ export const Experience = () => {
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
-      <ModelBox scale={[2, 2, 2]} position={[0, -0.7, 0]} />
+      {/* <ModelBox scale={[2, 2, 2]} position={[0, -0.7, 0]} /> */}
+      <Light scale={[2, 2, 2]} position={[0, -0.7, 0]} />
       {/* <TestModelBox scale={[2, 2, 2]} position={[0, -0.7, 0]} /> */}
 
       <mesh
