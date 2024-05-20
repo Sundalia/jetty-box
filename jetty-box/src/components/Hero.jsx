@@ -40,7 +40,7 @@ function Hero() {
       localStorage.setItem("message", message);
 
       axios
-        .post("http://localhost:3000/api/feedback", {
+        .post("https://send-email-indol.vercel.app/api/feedback", {
           name: recipient_email,
           phone: subject,
           message: message,
