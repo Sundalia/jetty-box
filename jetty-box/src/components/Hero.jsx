@@ -14,21 +14,25 @@ function Hero() {
   );
   const [subject, setSubject] = useState(localStorage.getItem("subject"));
   const [message, setMessages] = useState(localStorage.getItem("message"));
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    // Your form submission logic here
-    sendMail();
-    resetForm();
+    e.preventDefault();
 
-    openSuccessModal();
-    // Assuming this function opens a success modal
+    if (isChecked) {
+      sendMail();
+      resetForm();
+    }
   };
 
   function resetForm() {
     setEmail("");
     setSubject("");
     setMessages("");
+    setIsChecked(false);
   }
 
   function sendMail() {
@@ -45,7 +49,7 @@ function Hero() {
           phone: subject,
           message: message,
         })
-        .then(() => console.log("Message Send Succesfuly"))
+        .then(() => openSuccessModal())
         .catch((err) => console.log(err, "Oppssy daisssy"));
       return;
     }
@@ -154,20 +158,22 @@ function Hero() {
                   type="text"
                   id="message"
                   value={message}
+                  required
                   onChange={(e) => setMessages(e.target.value)}
                   className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
                 ></input>
                 <input
                   placeholder={t("tel")}
-                  type="text"
+                  type="tel"
                   id="subject"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
+                  required
                   className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
                 ></input>
                 <input
                   placeholder="E-mail"
-                  type="text"
+                  type="email"
                   id="email"
                   value={recipient_email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -175,11 +181,7 @@ function Hero() {
                   className="pl-5 border-[#B7B7B7] bg-transparent border rounded-[4px] h-[50px]"
                 ></input>
               </div>
-              <button
-                type="submit"
-                onClick={openSuccessModal}
-                className="mt-5 mb-5 w-full"
-              >
+              <button type="submit" className="mt-5 mb-5 w-full">
                 <div className="main-button flex items-center justify-center">
                   <span>{t("send")}</span>
                 </div>
@@ -187,6 +189,8 @@ function Hero() {
               <div className="flex items-start gap-5">
                 <input
                   type="checkbox"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
                   className="checked:bg-[#987642]  checkbox-input mt-[3px] appearance-none min-w-4 h-4 border-[3px] border-[2C2C2B] rounded-sm "
                 ></input>
                 <p className="mt-0 text-xs text-left">
