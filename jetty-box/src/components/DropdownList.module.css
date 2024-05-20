@@ -42,8 +42,10 @@
   background-color: #1e1e1e;
 }
 
-.questionsItem:hover {
-  background: #7d6137;
+@media (hover: hover) {
+  .questionsItem:hover {
+    background: #7d6137;
+  }
 }
 
 .questionsItemActive:hover {
@@ -147,9 +149,15 @@
   }
 }
 
-@media (width<500px) {
+/* @media (width<500px) {
   .questionsItem:hover {
     background-color: #1e1e1e;
     opacity: 0.8;
+  }
+} */
+
+@media (hover: none) {
+  .questionsItem:active {
+    background: #7d6137;
   }
 }
