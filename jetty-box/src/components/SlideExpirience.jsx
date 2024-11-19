@@ -13,11 +13,11 @@ function SlideExpirience() {
 
     return (
         <div id="swiper" className="swiper_container">
-            <div className="swiper_header_box">
-                <h2 className="swiper_header">{t("carousel_title")}</h2>
-                <img src={box_magic} className="swiper_box_magic m-5"/>
+            <h2 className="swiper_header">{t("carousel_title")}</h2>
+            <div className="swiper_content">
+                <img src={box_magic} className="swiper_box_magic"/>
+                <BoxCarousel/>
             </div>
-            <BoxCarousel/>
         </div>
     )
 }

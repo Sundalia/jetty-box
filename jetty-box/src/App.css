@@ -5,9 +5,7 @@
 
 .sticky {
   position: fixed !important;
-  top: 3rem !important;
-  left: 37vw;
-  margin-top: 7rem;
+  top: 5rem !important;
 }
 
 .parent_canvas {
@@ -15,17 +13,15 @@
   overflow: visible;
   display: flex;
   justify-content: center;
-  width: 450px;
-  height: 450px;
-  right: 15%;
+  width: 550px;
+  height: 470px;
   z-index: 1;
-  top: 7rem;
-  right: 35%;
+  top: 3rem;
 }
 
 .child_canvas {
-  height: 450px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
 }
 
 .canvas {
@@ -40,6 +36,11 @@
   margin: 5rem 0.25rem 0.25rem 0.25rem;
   position: relative;
   display: flex;
+  flex-direction: column;
+}
+
+.swiper_content{
+  display: flex;
 }
 
 .swiper_wrapper {
@@ -50,7 +51,6 @@
   text-align: center;
   display: flex;
   align-items: center !important;
-  text-align: center;
   width: 410px !important;
   height: 495px !important;
 }
@@ -74,7 +74,9 @@
 }
 
 .swiper_box_magic {
-  max-width: 200px;
+  max-width: 240px;
+  height: 16rem;
+  margin: 5rem;
 }
 
 .swiper_header {
@@ -84,6 +86,8 @@
   text-transform: uppercase;
   font-size: 2rem;
   margin: 1rem;
+  width: 100%;
+  display: inline-block;
 }
 
 .swiper-button-prev {
@@ -101,21 +105,14 @@
   .sticky {
     position: fixed !important;
     top: 35%;
-    left: 20%;
-    height: 40vh;
-    width: 60vw;
-  }
-
-  .child_canvas {
-    height: 40vh;
-    width: 60vw;
   }
 
   .parent_canvas {
-    height: 40vh;
-    width: 60vw;
-    top: 25%;
-    left: 20%;
+    height: 350px;
+    width: 90%;
+    top: 13rem;
+    left: 5%;
+    right: 5%;
   }
 
   .swiper_container {
@@ -146,70 +143,17 @@
   .sticky {
     position: fixed !important;
     top: 5vh;
-    left: 30vw;
+    width: 450px;
+    height: 450px;
   }
 
   .parent_canvas {
-    top: 10rem;
-    right: 5rem;
+    top: 7rem;
+    right: 50%;
+    left: 50%;
   }
 
   .swiper_container {
-    display: inline-block;
-  }
-
-  .swiper_wrapper {
-    width: 100vw;
-  }
-
-  .swiper_box_magic {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .sticky {
-    position: fixed !important;
-    top: 10vh;
-    left: 49vw;
-  }
-
-  .swiper_container {
-    display: flex;
-  }
-
-  .swiper_box_magic {
-    display: flex;
-  }
-
-  .swiper_header_box {
-    min-width: 420px;
-  }
-
-  .parent_canvas {
-    width: 30vw;
-    height: 30vh;
-    top: 9rem;
-    right: 15rem;
-  }
-}
-
-@media screen and (min-width: 1800px) {
-  .sticky {
-    position: fixed !important;
-    top: 10vh;
-    left: 38vw;
-  }
-
-  .child_canvas {
-    width: 46vw;
-    height: 46vh;
-  }
-
-  .parent_canvas {
-    top: 9rem;
-    left: 38vw;
-    width: 46vw;
-    height: 46vh;
+    width: 100%;
   }
 }
