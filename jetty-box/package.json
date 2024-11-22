@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@react-three/drei": "^9.105.3",
+    "@react-three/eslint-plugin": "^0.1.1",
     "@react-three/fiber": "^8.15.19",
     "@smakss/react-scroll-direction": "^4.2.0",
     "@types/three": "^0.162.0",

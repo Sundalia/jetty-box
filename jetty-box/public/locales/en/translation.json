@@ -72,12 +72,12 @@
   "dedugin": "Anton Dedugin",
   "ok": "Ok",
 
-  "design_url": "./models/en/cube_design_en.spline",
-  "ad_url": "./models/en/cube_addons_en.spline",
-  "dev_url": "./models/en/cube_development_en.spline",
-  "analytics_url": "./models/en/cube_analitycs_en.spline",
-  "telephony_url": "./models/en/cube_telephony_en.spline",
-  "crm_url": "./models/en/cube_crm_en.spline",
+  "design_url": "https://prod.spline.design/XelD7XIX63NIek2r/scene.splinecode",
+  "ad_url": "https://prod.spline.design/kSlcNfnFKRDzdHU1/scene.splinecode",
+  "dev_url": "https://prod.spline.design/QInwW7wTp5oSuKFM/scene.splinecode",
+  "analytics_url": "https://prod.spline.design/3nzvLgsObruYxNLf/scene.splinecode",
+  "telephony_url": "https://prod.spline.design/ZUzJBavr51MdkEfd/scene.splinecode",
+  "crm_url": "https://prod.spline.design/PVdKPREsNOnXKBSB/scene.splinecode",
 
   "carousel_title": "what problems do we solve"
 }

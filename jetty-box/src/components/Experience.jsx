@@ -33,7 +33,7 @@ function Experience() {
     return (
         <div id="canvas" className="parent_canvas">
             <div id="canvas_child" className="child_canvas">
-                <Spline width="100" heigth="100" scene="../public/models/main_cube.spline"/>
+                <Spline width="100" heigth="100" scene="https://prod.spline.design/oIn55snhGohRZ7TL/scene.splinecode"/>
             </div>
         </div>
     )

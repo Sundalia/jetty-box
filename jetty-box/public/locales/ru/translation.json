@@ -71,12 +71,12 @@
   "dedugin": "ИП Дедюгин А.А",
   "ok": "Понятно",
 
-  "design_url": "./models/ru/cube_design_ru.spline",
-  "ad_url": "./models/ru/cube_addons_ru.spline",
-  "dev_url": "./models/ru/cube_development_ru.spline",
-  "analytics_url": "./models/ru/cube_analitycs_ru.spline",
-  "telephony_url": "./models/ru/cube_telephony_ru.spline",
-  "crm_url": "./models/ru/cube_crm_ru.spline",
+  "design_url": "https://prod.spline.design/gkNnQWyi2DRrSWEg/scene.splinecode",
+  "ad_url": "https://prod.spline.design/6rTdJAxNBWefVvVx/scene.splinecode",
+  "dev_url": "https://prod.spline.design/YFLT2i2dm5ijHhEA/scene.splinecode",
+  "analytics_url": "https://prod.spline.design/EWxSE51dAL3U9-uZ/scene.splinecode",
+  "telephony_url": "https://prod.spline.design/KONgPQuhDhSabnmZ/scene.splinecode",
+  "crm_url": "https://prod.spline.design/LAZyKwTp1gpXmhve/scene.splinecode",
 
   "carousel_title": "какие задачи решаем"
 }
