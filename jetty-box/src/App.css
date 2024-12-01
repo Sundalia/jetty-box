@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   width: 550px;
-  height: 470px;
+  height: 510px;
   z-index: 1;
   top: 3rem;
 }
@@ -22,6 +22,7 @@
 .child_canvas {
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .canvas {
@@ -98,8 +99,6 @@
   color: #FDDFBC !important;
 }
 
-
-
 @media screen and (max-width: 762px) {
 
   .sticky {
@@ -108,7 +107,7 @@
   }
 
   .parent_canvas {
-    height: 350px;
+    height: 390px;
     width: 90%;
     top: 13rem;
     left: 5%;
