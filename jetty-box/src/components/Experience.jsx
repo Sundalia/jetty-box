@@ -25,7 +25,7 @@ function Experience() {
         if(currentScroll >= 550) {
             firstSlide.style.display = "block"
         }
-        if (currentScroll >= 651 && currentScroll <= 790) {
+        if (currentScroll >= 551 && currentScroll <= 690) {
             canvasChild.className = "child_canvas"
         }
     }
